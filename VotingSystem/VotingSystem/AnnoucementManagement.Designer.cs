@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class AnnouncementManagement
+    partial class AnnoucementManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // AnnouncementManagement
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 461);
-            this.Name = "AnnouncementManagement";
-            this.Text = "AnnouncementManagement";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "AnnoucementManagement";
         }
 
         #endregion
