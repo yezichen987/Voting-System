@@ -51,30 +51,91 @@ namespace VotingSystem
             }
             return true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            this.Hide();
+            register.ShowDialog(this);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (check() && DBConnect())
-            {
-                strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
-                command = new SqlCommand(strsql, mycon);
-                try
+                if (check() && DBConnect())
                 {
-                    int result = Convert.ToInt32(command.ExecuteScalar());
-                    if (result > 0)
+                if(radioButton3.Text == "Voter"){
+                    strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                    command = new SqlCommand(strsql, mycon);
+                    try
                     {
-                        MessageBox.Show("successful login");
-                       
+                        int result = Convert.ToInt32(command.ExecuteScalar());
+                        if (result > 0)
+                        {
+                            MessageBox.Show("successful login");
+                            HomePage homePage = new HomePage();
+                            this.Hide();
+                            homePage.ShowDialog(this);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login failed");
+                        }
                     }
-                    else
+                    catch
                     {
-                        MessageBox.Show("Login failed");
+                        MessageBox.Show("Sql error");
                     }
                 }
-                catch
+                 if (radioButton2.Text == "Auditor")
                 {
-                    MessageBox.Show("Sql error");
+                    strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                    command = new SqlCommand(strsql, mycon);
+                    try
+                    {
+                        int result = Convert.ToInt32(command.ExecuteScalar());
+                        if (result > 0)
+                        {
+                            MessageBox.Show("successful login");
+                            AuditorMenu auditorMenu = new AuditorMenu();
+                            this.Hide();
+                            auditorMenu.ShowDialog(this);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login failed");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Sql error");
+                    }
+                }
+                 if (radioButton1.Text == "Admin")
+                {
+                    strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                    command = new SqlCommand(strsql, mycon);
+                    try
+                    {
+                        int result = Convert.ToInt32(command.ExecuteScalar());
+                        if (result > 0)
+                        {
+                            MessageBox.Show("successful login");
+                            AdminMenu adminmenu = new AdminMenu();
+                            this.Hide();
+                            adminmenu.ShowDialog(this);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login failed");
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Sql error");
+                    }
                 }
             }
+            
         }
     }
 }

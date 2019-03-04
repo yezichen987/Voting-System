@@ -58,6 +58,12 @@
     <Compile Include="AnnoucementManagement.Designer.cs">
       <DependentUpon>AnnoucementManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuditorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditorMenu.Designer.cs">
+      <DependentUpon>AuditorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="CandidateInformation.cs">
       <SubType>Form</SubType>
     </Compile>
