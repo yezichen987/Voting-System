@@ -39,14 +39,14 @@ namespace VotingSystem
         }
         private bool check()
         {
-            if (textBox1.Text.Length == 0)
+            if (UserNametextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UserNametextBox.Select();
                 return false;
             }
-            if (textBox2.Text.Length == 0)
+            if (PasswordtextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UserNametextBox.Select();
                 return false;
             }
             return true;
@@ -55,7 +55,7 @@ namespace VotingSystem
         {
             if (check() && DBConnect())
             {
-                strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordtextBox.Text);
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
