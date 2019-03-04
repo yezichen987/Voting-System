@@ -41,24 +41,24 @@ namespace VotingSystem
         }
         private bool check()
         {
-            if (textBox1.Text.Length == 0)
+            if (UsernametextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UsernametextBox.Select();
                 return false;
             }
-            if (textBox2.Text.Length == 0)
+            if (PasswordtextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UsernametextBox.Select();
                 return false;
             }
-            if (textBox3.Text.Length == 0)
+            if (EmailtextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UsernametextBox.Select();
                 return false;
             }
-            if (textBox4.Text.Length == 0)
+            if (AgetextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UsernametextBox.Select();
                 return false;
             }
             return true;
@@ -79,7 +79,7 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             DBConnect();
-            strsql = string.Format("insert into Voter(Name,Password,Email,Age) values('{0}','{1}','{2}','{3}')",textBox1.Text,textBox2.Text,textBox3.Text,textBox4.Text);
+            strsql = string.Format("insert into Voter(Name,Password,Email,Age) values('{0}','{1}','{2}','{3}')",UsernametextBox.Text,PasswordtextBox.Text,EmailtextBox.Text,AgetextBox.Text);
             MessageBox.Show(strsql);
             command = new SqlCommand(strsql, mycon);
             try

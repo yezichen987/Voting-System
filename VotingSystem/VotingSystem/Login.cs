@@ -39,14 +39,14 @@ namespace VotingSystem
         }
         private bool check()
         {
-            if (textBox1.Text.Length == 0)
+            if (UserNametextBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UserNametextBox.Select();
                 return false;
             }
-            if (textBox2.Text.Length == 0)
+            if (PasswordBox.Text.Length == 0)
             {
-                textBox1.Select();
+                UserNametextBox.Select();
                 return false;
             }
             return true;
@@ -63,8 +63,8 @@ namespace VotingSystem
         {
                 if (check() && DBConnect())
                 {
-                if(radioButton3.Text == "Voter"){
-                    strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                if(VoterradioButton.Text == "Voter"){
+                    strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                     command = new SqlCommand(strsql, mycon);
                     try
                     {
@@ -86,9 +86,9 @@ namespace VotingSystem
                         MessageBox.Show("Sql error");
                     }
                 }
-                 if (radioButton2.Text == "Auditor")
+                 if (AuditorradioButton.Text == "Auditor")
                 {
-                    strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                    strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                     command = new SqlCommand(strsql, mycon);
                     try
                     {
@@ -110,9 +110,9 @@ namespace VotingSystem
                         MessageBox.Show("Sql error");
                     }
                 }
-                 if (radioButton1.Text == "Admin")
+                 if (AdminradioButton.Text == "Admin")
                 {
-                    strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", textBox1.Text, textBox2.Text);
+                    strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                     command = new SqlCommand(strsql, mycon);
                     try
                     {

@@ -35,12 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UsernametextBox = new System.Windows.Forms.TextBox();
+            this.PasswordtextBox = new System.Windows.Forms.TextBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.AgetextBox = new System.Windows.Forms.TextBox();
+            this.Submitbutton = new System.Windows.Forms.Button();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,65 +111,65 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Age";
             // 
-            // textBox1
+            // UsernametextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 21);
-            this.textBox1.TabIndex = 5;
+            this.UsernametextBox.Location = new System.Drawing.Point(152, 103);
+            this.UsernametextBox.Name = "UsernametextBox";
+            this.UsernametextBox.Size = new System.Drawing.Size(151, 21);
+            this.UsernametextBox.TabIndex = 5;
             // 
-            // textBox2
+            // PasswordtextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 21);
-            this.textBox2.TabIndex = 6;
+            this.PasswordtextBox.Location = new System.Drawing.Point(152, 178);
+            this.PasswordtextBox.Name = "PasswordtextBox";
+            this.PasswordtextBox.Size = new System.Drawing.Size(151, 21);
+            this.PasswordtextBox.TabIndex = 6;
             // 
-            // textBox3
+            // EmailtextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 241);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 21);
-            this.textBox3.TabIndex = 7;
+            this.EmailtextBox.Location = new System.Drawing.Point(152, 241);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(151, 21);
+            this.EmailtextBox.TabIndex = 7;
             // 
-            // textBox4
+            // AgetextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 305);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 21);
-            this.textBox4.TabIndex = 8;
+            this.AgetextBox.Location = new System.Drawing.Point(152, 305);
+            this.AgetextBox.Name = "AgetextBox";
+            this.AgetextBox.Size = new System.Drawing.Size(151, 21);
+            this.AgetextBox.TabIndex = 8;
             // 
-            // button1
+            // Submitbutton
             // 
-            this.button1.Location = new System.Drawing.Point(58, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Submitbutton.Location = new System.Drawing.Point(58, 383);
+            this.Submitbutton.Name = "Submitbutton";
+            this.Submitbutton.Size = new System.Drawing.Size(93, 23);
+            this.Submitbutton.TabIndex = 9;
+            this.Submitbutton.Text = "Submit";
+            this.Submitbutton.UseVisualStyleBackColor = true;
+            this.Submitbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Backbutton
             // 
-            this.button2.Location = new System.Drawing.Point(210, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Backbutton.Location = new System.Drawing.Point(210, 383);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(93, 23);
+            this.Backbutton.TabIndex = 10;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 436);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Backbutton);
+            this.Controls.Add(this.Submitbutton);
+            this.Controls.Add(this.AgetextBox);
+            this.Controls.Add(this.EmailtextBox);
+            this.Controls.Add(this.PasswordtextBox);
+            this.Controls.Add(this.UsernametextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -193,11 +193,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox UsernametextBox;
+        private System.Windows.Forms.TextBox PasswordtextBox;
+        private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.TextBox AgetextBox;
+        private System.Windows.Forms.Button Submitbutton;
+        private System.Windows.Forms.Button Backbutton;
     }
 }
