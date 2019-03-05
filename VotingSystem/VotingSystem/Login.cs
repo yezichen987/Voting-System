@@ -59,6 +59,11 @@ namespace VotingSystem
             register.ShowDialog(this);
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
                 if (check() && DBConnect())
@@ -78,7 +83,7 @@ namespace VotingSystem
                         }
                         else
                         {
-                            MessageBox.Show("Login failed");
+                           // MessageBox.Show("Login failed");
                         }
                     }
                     catch
@@ -86,53 +91,57 @@ namespace VotingSystem
                         MessageBox.Show("Sql error");
                     }
                 }
-                 if (AuditorradioButton.Text == "Auditor")
-                {
-                    strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
-                    command = new SqlCommand(strsql, mycon);
-                    try
+                
+                     if (AuditorradioButton.Text == "Auditor")
                     {
-                        int result = Convert.ToInt32(command.ExecuteScalar());
-                        if (result > 0)
+                        strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
+                        command = new SqlCommand(strsql, mycon);
+                        try
                         {
-                            MessageBox.Show("successful login");
-                            AuditorMenu auditorMenu = new AuditorMenu();
-                            this.Hide();
-                            auditorMenu.ShowDialog(this);
+                            int result = Convert.ToInt32(command.ExecuteScalar());
+                            if (result > 0)
+                            {
+                                MessageBox.Show("successful login");
+                                AuditorMenu auditorMenu = new AuditorMenu();
+                                this.Hide();
+                                auditorMenu.ShowDialog(this);
+                            }
+                            else
+                            {
+                               // MessageBox.Show("Login failed");
+                            }
                         }
-                        else
+                        catch
                         {
-                            MessageBox.Show("Login failed");
+                            MessageBox.Show("Sql error");
                         }
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Sql error");
-                    }
+                    
                 }
-                 if (AdminradioButton.Text == "Admin")
-                {
-                    strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
-                    command = new SqlCommand(strsql, mycon);
-                    try
+               
+                     if(AdminradioButton.Text == "Admin")
                     {
-                        int result = Convert.ToInt32(command.ExecuteScalar());
-                        if (result > 0)
+                        strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
+                        command = new SqlCommand(strsql, mycon);
+                        try
                         {
-                            MessageBox.Show("successful login");
-                            AdminMenu adminmenu = new AdminMenu();
-                            this.Hide();
-                            adminmenu.ShowDialog(this);
+                            int result = Convert.ToInt32(command.ExecuteScalar());
+                            if (result > 0)
+                            {
+                                MessageBox.Show("successful login");
+                                AdminMenu adminmenu = new AdminMenu();
+                                this.Hide();
+                                adminmenu.ShowDialog(this);
+                            }
+                            else
+                            {
+                                //MessageBox.Show("Login failed");
+                            }
                         }
-                        else
+                        catch
                         {
-                            MessageBox.Show("Login failed");
+                            MessageBox.Show("Sql error");
                         }
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Sql error");
-                    }
+                    
                 }
             }
             

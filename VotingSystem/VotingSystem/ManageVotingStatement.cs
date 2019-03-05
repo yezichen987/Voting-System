@@ -16,5 +16,8 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+        VotingSetting votingSetting;
+
+       
     }
 }
