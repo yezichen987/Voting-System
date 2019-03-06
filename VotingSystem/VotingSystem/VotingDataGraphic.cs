@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class ManageCandidateInformation : Form
+    public partial class Voting_Data_Graphic : Form
     {
-        public ManageCandidateInformation()
+        public Voting_Data_Graphic()
         {
             InitializeComponent();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
