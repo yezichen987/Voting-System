@@ -17,3 +17,7 @@ D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.Gen
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.CoreCompileInputs.cache
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.exe
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.pdb
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AnnoucementManagement.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorMenu.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources

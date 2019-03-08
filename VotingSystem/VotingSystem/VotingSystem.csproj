@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -183,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageVotingStatement.resx">
       <DependentUpon>ManageVotingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotingDataGraphic.resx">
+      <DependentUpon>VotingDataGraphic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotingSetting.resx">
       <DependentUpon>VotingSetting.cs</DependentUpon>
