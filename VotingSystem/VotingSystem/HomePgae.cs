@@ -53,5 +53,24 @@ namespace VotingSystem
             i++;
             if (i == 3) { i = 0; }
         }
+
+        private void registeredLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register register = new Register();
+            this.Close();
+            register.ShowDialog(this);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.ShowDialog(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,6 +69,7 @@
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // registeredLabel
             // 
@@ -80,6 +81,7 @@
             this.registeredLabel.TabIndex = 2;
             this.registeredLabel.TabStop = true;
             this.registeredLabel.Text = "registered";
+            this.registeredLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registeredLabel_LinkClicked);
             // 
             // HomePageLabel
             // 
@@ -162,6 +164,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Get Information";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
