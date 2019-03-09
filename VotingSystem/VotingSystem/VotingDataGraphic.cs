@@ -46,18 +46,18 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
-            //new 一个叫做【Strength】的系列
+            
             Series Strength = new Series("Number");
-            //设置chart的类型，这里为柱状图
+          
             Strength.ChartType = SeriesChartType.Column;
-            //给系列上的点进行赋值，分别对应横坐标和纵坐标的值
+        
             Strength.Points.AddXY(label1.Text, textBox1.Text);
             Strength.Points.AddXY(label2.Text, textBox2.Text);
             Strength.Points.AddXY(label3.Text, textBox3.Text);
             Strength.Points.AddXY(label4.Text, textBox4.Text);
             Strength.Points.AddXY(label5.Text, textBox5.Text);
             Strength.Points.AddXY(label6.Text, textBox6.Text);
-            //把series添加到chart上
+       
             chart1.Series.Add(Strength);
 
         }

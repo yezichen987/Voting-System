@@ -87,11 +87,14 @@ namespace VotingSystem
         private void ManageCandidateInformation_Load(object sender, EventArgs e)
         {
             this.AllowDrop = true;
-            if (textBox1.Text == null)
-            {
-                button2.Enabled = false;
-            }
-           
+            //if (textBox1.Text.Length == 0)
+            //{
+            //    button2.Enabled = false;
+            //}
+            //if(textBox1.Text.Length != 0)
+            //        {
+            //    button2.Enabled = true;
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
