@@ -16,7 +16,7 @@ namespace VotingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageCandidateInformation());
+            Application.Run(new Voting_Data_Graphic());
         }
     }
 }

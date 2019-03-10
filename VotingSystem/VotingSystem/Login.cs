@@ -77,8 +77,10 @@ namespace VotingSystem
                         if (result > 0)
                         {
                             MessageBox.Show("successful login");
+                            
                             HomePage homePage = new HomePage();
                             this.Hide();
+                            
                             homePage.ShowDialog(this);
                         }
                         else

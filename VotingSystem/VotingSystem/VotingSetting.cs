@@ -58,18 +58,24 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+            HomePage homePage = new HomePage(textBox1.Text);
+
             DBConnect();
-            strsql = string.Format("insert into VoteSet(VoteLimit,Candidate) values('{0}','{1}')", comboBox1.Text,comboBox2.Text);
+            strsql = string.Format("insert into Voting(VoteLimit,CandidateNum) values('{0}','{1}')", comboBox1.Text,comboBox2.Text);
             MessageBox.Show(strsql);
             command = new SqlCommand(strsql, mycon);
             try
             {
                 command.ExecuteScalar();
                 MessageBox.Show("Save successful");
+                HomePage homePg = new HomePage();
+                this.Hide();
+                homePg.ShowDialog(this);
+
             }
             catch
             {
-                MessageBox.Show("Register failed");
+                MessageBox.Show("Save failed");
             }
             finally
             {
@@ -80,6 +86,7 @@ namespace VotingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             timer1.Stop();
         }
 

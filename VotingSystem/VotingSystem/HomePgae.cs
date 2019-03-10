@@ -20,6 +20,11 @@ namespace VotingSystem
             images[1] = Properties.Resources.vote2;
             images[2] = Properties.Resources.vote3;
         }
+        public HomePage(string str)
+        {
+            InitializeComponent();
+            TimeLabel.Text = str;
+        }
         private int i = 0;
         ImageList ilist = new ImageList();
         private void label1_Click(object sender, EventArgs e)
@@ -57,14 +62,14 @@ namespace VotingSystem
         private void registeredLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Register register = new Register();
-            this.Close();
+            this.Hide();
             register.ShowDialog(this);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Login login = new Login();
-            this.Close();
+            this.Hide();
             login.ShowDialog(this);
         }
 
@@ -72,5 +77,12 @@ namespace VotingSystem
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

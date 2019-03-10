@@ -58,6 +58,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(981, 54);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkLabel1
             // 
@@ -74,7 +75,7 @@
             // registeredLabel
             // 
             this.registeredLabel.AutoSize = true;
-            this.registeredLabel.Location = new System.Drawing.Point(691, 22);
+            this.registeredLabel.Location = new System.Drawing.Point(722, 22);
             this.registeredLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registeredLabel.Name = "registeredLabel";
             this.registeredLabel.Size = new System.Drawing.Size(87, 15);
@@ -146,6 +147,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(63, 509);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
@@ -157,7 +159,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(427, 509);
+            this.button2.Location = new System.Drawing.Point(392, 509);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 29);
@@ -168,7 +170,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(763, 509);
+            this.button3.Location = new System.Drawing.Point(725, 509);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 29);

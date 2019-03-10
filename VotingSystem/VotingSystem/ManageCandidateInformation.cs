@@ -87,16 +87,49 @@ namespace VotingSystem
         private void ManageCandidateInformation_Load(object sender, EventArgs e)
         {
             this.AllowDrop = true;
-            //if (textBox1.Text.Length == 0)
-            //{
-            //    button2.Enabled = false;
-            //}
-            //if(textBox1.Text.Length != 0)
-            //        {
-            //    button2.Enabled = true;
-            //}
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True"))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select top 6 * from Candidate", conn);
+                sda.Fill(dt);
+            }
         }
+        public bool ExecuteNone(string[] sql)
+        {
+            bool result;
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
+            conn.Open();
+            SqlTransaction tran = conn.BeginTransaction();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.Transaction = tran;
 
+            try
+            {
+                for (int i = 0; i < sql.Length; i++)
+                {
+                    if (sql[i] == null || sql[i] == "")
+                    {
+                        continue;
+                    }
+                    cmd.CommandText = sql[i];
+                    cmd.ExecuteNonQuery();
+                }
+                tran.Commit();
+                result = true;
+
+            }
+
+            catch (System.Exception)
+            {
+                tran.Rollback();
+                result = false;
+            }
+            conn.Close();
+
+            return result;
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -114,9 +147,9 @@ namespace VotingSystem
                 {
                     
                     FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
-                    if (fileInfo.Length > 40960)
+                    if (fileInfo.Length > 409060)
                     {
-                        MessageBox.Show("the size of picture need to < 40K");
+                        MessageBox.Show("the size of picture need to < 400K");
                     }
                     else
                     {
@@ -130,6 +163,10 @@ namespace VotingSystem
             }
 
         }
+
+     
+
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -145,7 +182,7 @@ namespace VotingSystem
                
             }
             catch
-            {
+            { 
                 MessageBox.Show("upload failed");
             }
             finally

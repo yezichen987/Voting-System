@@ -26,5 +26,12 @@ namespace VotingSystem
         {
             this.Close();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CandidateIntroduction candidateIntroduction = new CandidateIntroduction();
+            this.Close();
+            candidateIntroduction.ShowDialog(this);
+        }
     }
 }
