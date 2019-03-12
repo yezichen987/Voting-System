@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
 namespace VotingSystem
 {
     public partial class ManageCandidateInformation : Form
@@ -87,12 +88,7 @@ namespace VotingSystem
         private void ManageCandidateInformation_Load(object sender, EventArgs e)
         {
             this.AllowDrop = true;
-            DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True"))
-            {
-                SqlDataAdapter sda = new SqlDataAdapter("Select top 6 * from Candidate", conn);
-                sda.Fill(dt);
-            }
+           
         }
         public bool ExecuteNone(string[] sql)
         {
@@ -163,10 +159,9 @@ namespace VotingSystem
             }
 
         }
+      
 
-     
 
-       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -189,9 +184,93 @@ namespace VotingSystem
             {
                 mycon.Close();
             }
-            CandidateIntroduction candidateIntroduction = new CandidateIntroduction(pictureBox1.Image);
-            candidateIntroduction.ShowDialog();
-           
+        
+
         }
+        public void InageShow(PictureBox PB)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.Title = " 请选择客户端longin的图片";
+            openfile.Filter = "Login图片 (*.jpg;*.bmp;*png)|*.jpeg;*.jpg;*.bmp;*.png|AllFiles(*.*)|*.*";
+            if (DialogResult.OK == openfile.ShowDialog())
+            {
+                try
+                {
+                    Bitmap bmp = new Bitmap(openfile.FileName);
+                    pictureBox1.Image = bmp;
+                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    //字面是对当前图片进行了二进制转换
+                    MemoryStream ms = new MemoryStream();
+                    bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+                    byte[] arr = new byte[ms.Length];
+                    ms.Position = 0;
+                    ms.Read(arr, 0, (int)ms.Length);
+                    ms.Close();
+                    //直接返这个值放到数据就行了
+                    string ee = Convert.ToBase64String(arr);
+                }
+                catch { }
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //获取用户打开的路径然转换成二进制存入数据库
+
+          
+                OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+               
+                string filePath = ofd.FileName;//图片路径
+                FileStream fs = new FileStream(filePath, FileMode.Open);
+                byte[] imageBytes = new byte[fs.Length];
+                BinaryReader br = new BinaryReader(fs);
+                imageBytes = br.ReadBytes(Convert.ToInt32(fs.Length));//图片转换成二进制流
+
+                string strSql = string.Format("insert into Candidate(Image)Values(@Image)");
+                int count = Write(strSql, imageBytes);
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Successful！");
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Fail！");
+                }
+            }
+
+
+        }
+        private int Write(string strSql, byte[] imageBytes)
+        {
+            string connStr = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(strSql, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        SqlParameter sqlParameter = new SqlParameter("@image", SqlDbType.Image);
+                        sqlParameter.Value = imageBytes;
+                        cmd.Parameters.Add(sqlParameter);
+                        int rows = cmd.ExecuteNonQuery();
+                        return rows;
+                    }
+                    catch (Exception e)
+                    {
+                        throw;
+                    }
+                }
+            }
+        }
+
+
     }
 }

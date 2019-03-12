@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace VotingSystem
 {
     public partial class CandidateIntroduction : Form
@@ -16,6 +16,13 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+        public CandidateIntroduction(byte[] imagebytes)
+        {
+            InitializeComponent();
+        }
+        string strcon, strsql;
+        SqlConnection mycon;
+        SqlCommand command;
         public CandidateIntroduction(Image image)
         {
             InitializeComponent();
@@ -42,6 +49,23 @@ namespace VotingSystem
         private void CandidateIntroduction_Load(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            byte[] imagebytes = null;
+            //打开数据库
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
+            con.Open();
+            SqlCommand com = new SqlCommand("select Image from Candidate where Id=1", con);
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                imagebytes = (byte[])dr.GetValue(1);
+            }
+            dr.Close();
+            com.Clone();
+            con.Close();
+            CandidateIntroduction candidate = new CandidateIntroduction(imagebytes);
+            Bitmap bmpt = new Bitmap(candidate.ToString());
+            pictureBox1.Image = bmpt;
+
         }
     }
 }
