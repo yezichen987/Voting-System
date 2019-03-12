@@ -189,6 +189,9 @@ namespace VotingSystem
             {
                 mycon.Close();
             }
+            CandidateIntroduction candidateIntroduction = new CandidateIntroduction(pictureBox1.Image);
+            candidateIntroduction.ShowDialog();
+           
         }
     }
 }

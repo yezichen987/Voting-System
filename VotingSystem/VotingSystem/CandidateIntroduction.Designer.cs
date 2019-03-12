@@ -45,15 +45,15 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(980, 56);
+            this.panel1.Size = new System.Drawing.Size(618, 56);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 20);
+            this.label2.Location = new System.Drawing.Point(261, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 15);
@@ -70,12 +70,13 @@
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(248, 96);
+            this.label3.Location = new System.Drawing.Point(227, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 24);
@@ -95,7 +96,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(277, 438);
+            this.button1.Location = new System.Drawing.Point(255, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 46);
             this.button1.TabIndex = 3;
@@ -114,7 +115,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(252, 141);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 142);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,16 +126,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 547);
+            this.ClientSize = new System.Drawing.Size(617, 547);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CandidateIntroduction";
             this.Text = "CandidateIntroduction";
+            this.Load += new System.EventHandler(this.CandidateIntroduction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
