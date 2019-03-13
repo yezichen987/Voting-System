@@ -19,6 +19,26 @@ namespace VotingSystem
             images[0] = Properties.Resources.vote1;
             images[1] = Properties.Resources.vote2;
             images[2] = Properties.Resources.vote3;
+            
+            comboBox1.Items.Add(new Item("10px", 10));
+            comboBox1.Items.Add(new Item("20px", 20));
+            comboBox1.Items.Add(new Item("25px", 25));
+
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private class Item
+        {
+            public string sizeName;
+            public int size;
+            public Item(string name, int value)
+            {
+                sizeName = name; size = value;
+            }
+            public override string ToString()
+            {
+                return sizeName;
+            }
         }
         public HomePage(string str)
         {
@@ -29,13 +49,12 @@ namespace VotingSystem
         ImageList ilist = new ImageList();
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            
-
+            TimeLabel.Text = DateTime.Now.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +102,18 @@ namespace VotingSystem
 
         }
 
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Item itm = (Item)comboBox1.SelectedItem;
+          
+            label2.Font = new Font("Arial", itm.size);
+            button1.Font = new Font("Arial", itm.size);
+            button2.Font = new Font("Arial", itm.size);
+            button3.Font = new Font("Arial", itm.size);
+            TimeLabel.Font = new Font("Arial", itm.size);
+            HomePageLabel.Font = new Font("Arial", itm.size);
+            linkLabel1.Font = new Font("Arial", itm.size);
+            registeredLabel.Font = new Font("Arial", itm.size);
+        }
     }
 }

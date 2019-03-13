@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 54);
             this.panel1.TabIndex = 0;
@@ -86,6 +86,7 @@
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "time";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -112,7 +113,7 @@
             // UserNametextBox
             // 
             this.UserNametextBox.Location = new System.Drawing.Point(233, 148);
-            this.UserNametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserNametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UserNametextBox.Name = "UserNametextBox";
             this.UserNametextBox.Size = new System.Drawing.Size(195, 25);
             this.UserNametextBox.TabIndex = 3;
@@ -120,7 +121,7 @@
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(233, 264);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(195, 25);
             this.PasswordBox.TabIndex = 4;
@@ -140,7 +141,7 @@
             // 
             this.AdminradioButton.AutoSize = true;
             this.AdminradioButton.Location = new System.Drawing.Point(233, 368);
-            this.AdminradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdminradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.AdminradioButton.Name = "AdminradioButton";
             this.AdminradioButton.Size = new System.Drawing.Size(68, 19);
             this.AdminradioButton.TabIndex = 9;
@@ -152,7 +153,7 @@
             // 
             this.AuditorradioButton.AutoSize = true;
             this.AuditorradioButton.Location = new System.Drawing.Point(233, 422);
-            this.AuditorradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AuditorradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.AuditorradioButton.Name = "AuditorradioButton";
             this.AuditorradioButton.Size = new System.Drawing.Size(84, 19);
             this.AuditorradioButton.TabIndex = 10;
@@ -164,7 +165,7 @@
             // 
             this.VoterradioButton.AutoSize = true;
             this.VoterradioButton.Location = new System.Drawing.Point(359, 368);
-            this.VoterradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VoterradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.VoterradioButton.Name = "VoterradioButton";
             this.VoterradioButton.Size = new System.Drawing.Size(68, 19);
             this.VoterradioButton.TabIndex = 11;
@@ -175,7 +176,7 @@
             // Loginbutton
             // 
             this.Loginbutton.Location = new System.Drawing.Point(93, 492);
-            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Loginbutton.Name = "Loginbutton";
             this.Loginbutton.Size = new System.Drawing.Size(100, 29);
             this.Loginbutton.TabIndex = 12;
@@ -186,7 +187,7 @@
             // Registerbutton
             // 
             this.Registerbutton.Location = new System.Drawing.Point(299, 492);
-            this.Registerbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Registerbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Registerbutton.Name = "Registerbutton";
             this.Registerbutton.Size = new System.Drawing.Size(100, 29);
             this.Registerbutton.TabIndex = 13;
@@ -210,7 +211,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

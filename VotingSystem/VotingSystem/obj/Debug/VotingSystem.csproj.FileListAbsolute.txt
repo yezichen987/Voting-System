@@ -4,7 +4,6 @@ D:\123\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.pdb
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
-D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Login.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Properties.Resources.resources
@@ -21,3 +20,9 @@ D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Annoucemen
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorMenu.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction2.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction3.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction4.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction5.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction6.resources

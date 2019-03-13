@@ -64,6 +64,11 @@ namespace VotingSystem
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
                 if (check() && DBConnect())

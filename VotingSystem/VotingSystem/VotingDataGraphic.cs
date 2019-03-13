@@ -59,7 +59,12 @@ namespace VotingSystem
             Strength.Points.AddXY(label6.Text, textBox6.Text);
        
             chart1.Series.Add(Strength);
-
+            chart2.Series[0]["PieLabelStyle"] = "Outside";
+            chart2.Series[0]["PieLineColor"] = "Black";
+            List<String> XData = new List<string>() { label1.Text, label2.Text, label3.Text, label4.Text, label5.Text, label6.Text };
+            List<String> YData = new List<string>() { textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text };
+            chart2.Series[0].Points.DataBindXY(XData, YData);
+            //chart2.Series[0].Label = "#VALX;#PERCENT{P2}";
         }
 
         private void Voting_Data_Graphic_Load(object sender, EventArgs e)

@@ -86,6 +86,7 @@
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "time";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -120,7 +121,8 @@
             this.linkLabel3.Size = new System.Drawing.Size(142, 24);
             this.linkLabel3.TabIndex = 3;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Candidate 1";
+            this.linkLabel3.Text = "Candidate 2";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -132,7 +134,8 @@
             this.linkLabel4.Size = new System.Drawing.Size(142, 24);
             this.linkLabel4.TabIndex = 4;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Candidate 1";
+            this.linkLabel4.Text = "Candidate 3";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -144,7 +147,8 @@
             this.linkLabel5.Size = new System.Drawing.Size(142, 24);
             this.linkLabel5.TabIndex = 5;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Candidate 1";
+            this.linkLabel5.Text = "Candidate 4";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -156,7 +160,8 @@
             this.linkLabel6.Size = new System.Drawing.Size(142, 24);
             this.linkLabel6.TabIndex = 6;
             this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Candidate 1";
+            this.linkLabel6.Text = "Candidate 5";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -168,7 +173,8 @@
             this.linkLabel7.Size = new System.Drawing.Size(142, 24);
             this.linkLabel7.TabIndex = 7;
             this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Candidate 1";
+            this.linkLabel7.Text = "Candidate 6";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // button1
             // 
@@ -179,6 +185,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Back To Home";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CandidateInformation
             // 

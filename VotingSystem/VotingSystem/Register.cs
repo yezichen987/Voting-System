@@ -76,6 +76,18 @@ namespace VotingSystem
             this.Close();
         }
 
+        private void label_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            this.Close();
+            homePage.ShowDialog();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DBConnect();

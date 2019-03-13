@@ -18,6 +18,14 @@ namespace VotingSystem
         }
         VotingSetting votingSetting;
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

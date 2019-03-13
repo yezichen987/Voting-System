@@ -34,15 +34,13 @@
             this.registeredLabel = new System.Windows.Forms.LinkLabel();
             this.HomePageLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,14 +54,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(981, 54);
+            this.panel1.Size = new System.Drawing.Size(1236, 81);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(875, 22);
+            this.linkLabel1.Location = new System.Drawing.Point(1058, 22);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(47, 15);
@@ -75,7 +73,7 @@
             // registeredLabel
             // 
             this.registeredLabel.AutoSize = true;
-            this.registeredLabel.Location = new System.Drawing.Point(722, 22);
+            this.registeredLabel.Location = new System.Drawing.Point(767, 22);
             this.registeredLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registeredLabel.Name = "registeredLabel";
             this.registeredLabel.Size = new System.Drawing.Size(87, 15);
@@ -87,7 +85,7 @@
             // HomePageLabel
             // 
             this.HomePageLabel.AutoSize = true;
-            this.HomePageLabel.Location = new System.Drawing.Point(424, 22);
+            this.HomePageLabel.Location = new System.Drawing.Point(527, 22);
             this.HomePageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HomePageLabel.Name = "HomePageLabel";
             this.HomePageLabel.Size = new System.Drawing.Size(79, 15);
@@ -105,53 +103,24 @@
             this.TimeLabel.Text = "time";
             this.TimeLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(665, 81);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(85, 34);
-            this.listBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(585, 101);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(791, 101);
+            this.label2.Location = new System.Drawing.Point(830, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(853, 81);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(85, 34);
-            this.listBox2.TabIndex = 5;
-            // 
             // button1
             // 
+            this.button1.AutoSize = true;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(63, 509);
+            this.button1.Location = new System.Drawing.Point(45, 525);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 29);
+            this.button1.Size = new System.Drawing.Size(275, 129);
             this.button1.TabIndex = 6;
             this.button1.Text = "Start Voting";
             this.button1.UseVisualStyleBackColor = true;
@@ -159,10 +128,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(392, 509);
+            this.button2.Location = new System.Drawing.Point(459, 525);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 29);
+            this.button2.Size = new System.Drawing.Size(278, 129);
             this.button2.TabIndex = 7;
             this.button2.Text = "Get Information";
             this.button2.UseVisualStyleBackColor = true;
@@ -170,10 +139,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(725, 509);
+            this.button3.Location = new System.Drawing.Point(878, 525);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 29);
+            this.button3.Size = new System.Drawing.Size(270, 129);
             this.button3.TabIndex = 8;
             this.button3.Text = "View Voting Data";
             this.button3.UseVisualStyleBackColor = true;
@@ -188,26 +157,33 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VotingSystem.Properties.Resources.vote1;
-            this.pictureBox1.Location = new System.Drawing.Point(164, 165);
+            this.pictureBox1.Location = new System.Drawing.Point(240, 165);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(645, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(645, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1027, 89);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 576);
+            this.ClientSize = new System.Drawing.Size(1234, 688);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
@@ -228,15 +204,13 @@
         private System.Windows.Forms.Label HomePageLabel;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel registeredLabel;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

@@ -19,7 +19,9 @@ namespace VotingSystem
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            CandidateInformation candidateInformation = new CandidateInformation();
+            this.Close();
+            candidateInformation.ShowDialog(this);
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -39,6 +41,11 @@ namespace VotingSystem
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
     }
 }

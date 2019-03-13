@@ -128,35 +128,35 @@ namespace VotingSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-               
-                pictureBox1.Load(openFileDialog1.FileName);
-                string extension = Path.GetExtension(openFileDialog1.FileName);
-                 
-                string[] str = new string[] { ".gif", ".jpge", ".jpg", ".png" };
-                if (!str.Contains(extension))
-                {
-                    MessageBox.Show("Only'gif,jpge,jpg 'can be upload！");
-                }
-                else
-                {
-                    
-                    FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
-                    if (fileInfo.Length > 409060)
-                    {
-                        MessageBox.Show("the size of picture need to < 400K");
-                    }
-                    else
-                    {
-                        //Path
-                        string image = openFileDialog1.FileName;
-                        //  XXX.jpg
-                        string picpath = openFileDialog1.SafeFileName;
-                       //File.Copy(openFileDialog1.FileName, Application.StartupPath + "\\Image\\" + picpath);
-                    }
-                }
-            }
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+
+            //    pictureBox1.Load(openFileDialog1.FileName);
+            //    string extension = Path.GetExtension(openFileDialog1.FileName);
+
+            //    string[] str = new string[] { ".gif", ".jpge", ".jpg", ".png" };
+            //    if (!str.Contains(extension))
+            //    {
+            //        MessageBox.Show("Only'gif,jpge,jpg 'can be upload！");
+            //    }
+            //    else
+            //    {
+
+            //        FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
+            //        if (fileInfo.Length > 409060)
+            //        {
+            //            MessageBox.Show("the size of picture need to < 400K");
+            //        }
+            //        else
+            //        {
+            //            //Path
+            //            string image = openFileDialog1.FileName;
+            //            //  XXX.jpg
+            //            string picpath = openFileDialog1.SafeFileName;
+            //            //File.Copy(openFileDialog1.FileName, Application.StartupPath + "\\Image\\" + picpath);
+            //        }
+            //    }
+            //}
 
         }
       
@@ -187,32 +187,32 @@ namespace VotingSystem
         
 
         }
-        public void InageShow(PictureBox PB)
-        {
-            OpenFileDialog openfile = new OpenFileDialog();
-            openfile.Title = " 请选择客户端longin的图片";
-            openfile.Filter = "Login图片 (*.jpg;*.bmp;*png)|*.jpeg;*.jpg;*.bmp;*.png|AllFiles(*.*)|*.*";
-            if (DialogResult.OK == openfile.ShowDialog())
-            {
-                try
-                {
-                    Bitmap bmp = new Bitmap(openfile.FileName);
-                    pictureBox1.Image = bmp;
-                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        //public void InageShow(PictureBox PB)
+        //{
+        //    OpenFileDialog openfile = new OpenFileDialog();
+        //    openfile.Title = " 请选择客户端longin的图片";
+        //    openfile.Filter = "Login图片 (*.jpg;*.bmp;*png)|*.jpeg;*.jpg;*.bmp;*.png|AllFiles(*.*)|*.*";
+        //    if (DialogResult.OK == openfile.ShowDialog())
+        //    {
+        //        try
+        //        {
+        //            Bitmap bmp = new Bitmap(openfile.FileName);
+        //            pictureBox1.Image = bmp;
+        //            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
-                    //字面是对当前图片进行了二进制转换
-                    MemoryStream ms = new MemoryStream();
-                    bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-                    byte[] arr = new byte[ms.Length];
-                    ms.Position = 0;
-                    ms.Read(arr, 0, (int)ms.Length);
-                    ms.Close();
-                    //直接返这个值放到数据就行了
-                    string ee = Convert.ToBase64String(arr);
-                }
-                catch { }
-            }
-        }
+        //            //字面是对当前图片进行了二进制转换
+        //            MemoryStream ms = new MemoryStream();
+        //            bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+        //            byte[] arr = new byte[ms.Length];
+        //            ms.Position = 0;
+        //            ms.Read(arr, 0, (int)ms.Length);
+        //            ms.Close();
+        //            //直接返这个值放到数据就行了
+        //            string ee = Convert.ToBase64String(arr);
+        //        }
+        //        catch { }
+        //    }
+        //}
         private void button3_Click(object sender, EventArgs e)
         {
             //获取用户打开的路径然转换成二进制存入数据库
@@ -220,7 +220,7 @@ namespace VotingSystem
           
                 OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
-
+            
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                
@@ -230,12 +230,12 @@ namespace VotingSystem
                 BinaryReader br = new BinaryReader(fs);
                 imageBytes = br.ReadBytes(Convert.ToInt32(fs.Length));//图片转换成二进制流
 
-                string strSql = string.Format("insert into Candidate(Image)Values(@Image)");
+                string strSql = string.Format("insert into CandidateImage(Image)Values(@Image)");
                 int count = Write(strSql, imageBytes);
 
                 if (count > 0)
                 {
-                    MessageBox.Show("Successful！");
+                    MessageBox.Show(" Image Saved Successful！");
                    
                 }
                 else
@@ -246,6 +246,12 @@ namespace VotingSystem
 
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
         private int Write(string strSql, byte[] imageBytes)
         {
             string connStr = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";

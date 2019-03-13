@@ -26,9 +26,12 @@ namespace VotingSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Voting_Data_Check voting_Data_Check = new Voting_Data_Check();
-            this.Close();
-            voting_Data_Check.ShowDialog(this);
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
     }
 }
