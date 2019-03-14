@@ -26,3 +26,4 @@ D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateI
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction4.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction5.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction6.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Homepage1.resources

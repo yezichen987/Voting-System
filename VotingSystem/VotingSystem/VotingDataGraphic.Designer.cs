@@ -200,7 +200,7 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.IsValueShownAsLabel = true;
-            series2.Label = "#VALX:#PERCENT\\n";
+            series2.Label = "#PERCENT\\n";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);

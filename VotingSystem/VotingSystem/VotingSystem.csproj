@@ -107,6 +107,12 @@
     <Compile Include="CandidateIntroduction6.Designer.cs">
       <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homepage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage1.Designer.cs">
+      <DependentUpon>Homepage1.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePgae.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CandidateIntroduction6.resx">
       <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage1.resx">
+      <DependentUpon>Homepage1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePgae.resx">
       <DependentUpon>HomePgae.cs</DependentUpon>

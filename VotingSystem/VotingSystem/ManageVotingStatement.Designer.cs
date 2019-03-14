@@ -242,6 +242,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageVotingStatement";
             this.Text = "VotingStatement";
+            this.Load += new System.EventHandler(this.ManageVotingStatement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

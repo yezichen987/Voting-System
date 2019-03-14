@@ -61,7 +61,7 @@ namespace VotingSystem
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            label1.Text = DateTime.Now.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace VotingSystem
                         {
                             MessageBox.Show("successful login");
                             
-                            HomePage homePage = new HomePage();
+                            Homepage1 homePage = new Homepage1();
                             this.Hide();
                             
                             homePage.ShowDialog(this);

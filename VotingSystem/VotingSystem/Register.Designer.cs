@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 51);
             this.panel1.TabIndex = 0;
@@ -123,7 +123,7 @@
             // UsernametextBox
             // 
             this.UsernametextBox.Location = new System.Drawing.Point(203, 129);
-            this.UsernametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernametextBox.Name = "UsernametextBox";
             this.UsernametextBox.Size = new System.Drawing.Size(200, 25);
             this.UsernametextBox.TabIndex = 5;
@@ -131,7 +131,7 @@
             // PasswordtextBox
             // 
             this.PasswordtextBox.Location = new System.Drawing.Point(203, 222);
-            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordtextBox.Name = "PasswordtextBox";
             this.PasswordtextBox.Size = new System.Drawing.Size(200, 25);
             this.PasswordtextBox.TabIndex = 6;
@@ -139,7 +139,7 @@
             // EmailtextBox
             // 
             this.EmailtextBox.Location = new System.Drawing.Point(203, 301);
-            this.EmailtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmailtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(200, 25);
             this.EmailtextBox.TabIndex = 7;
@@ -147,7 +147,7 @@
             // AgetextBox
             // 
             this.AgetextBox.Location = new System.Drawing.Point(203, 381);
-            this.AgetextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AgetextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AgetextBox.Name = "AgetextBox";
             this.AgetextBox.Size = new System.Drawing.Size(200, 25);
             this.AgetextBox.TabIndex = 8;
@@ -155,7 +155,7 @@
             // Submitbutton
             // 
             this.Submitbutton.Location = new System.Drawing.Point(32, 479);
-            this.Submitbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Submitbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Submitbutton.Name = "Submitbutton";
             this.Submitbutton.Size = new System.Drawing.Size(124, 29);
             this.Submitbutton.TabIndex = 9;
@@ -166,7 +166,7 @@
             // Backbutton
             // 
             this.Backbutton.Location = new System.Drawing.Point(203, 479);
-            this.Backbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Backbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(124, 29);
             this.Backbutton.TabIndex = 10;
@@ -202,9 +202,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

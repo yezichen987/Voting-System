@@ -16,5 +16,10 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+
+        private void VoterInformation_Load(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
     }
 }

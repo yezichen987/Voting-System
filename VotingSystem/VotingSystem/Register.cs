@@ -88,6 +88,11 @@ namespace VotingSystem
             homePage.ShowDialog();
         }
 
+        private void Register_Load(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DBConnect();

@@ -88,7 +88,8 @@ namespace VotingSystem
         private void ManageCandidateInformation_Load(object sender, EventArgs e)
         {
             this.AllowDrop = true;
-           
+            label1.Text = DateTime.Now.ToString();
+
         }
         public bool ExecuteNone(string[] sql)
         {
@@ -128,35 +129,35 @@ namespace VotingSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
 
-            //    pictureBox1.Load(openFileDialog1.FileName);
-            //    string extension = Path.GetExtension(openFileDialog1.FileName);
+                pictureBox1.Load(openFileDialog1.FileName);
+                string extension = Path.GetExtension(openFileDialog1.FileName);
 
-            //    string[] str = new string[] { ".gif", ".jpge", ".jpg", ".png" };
-            //    if (!str.Contains(extension))
-            //    {
-            //        MessageBox.Show("Only'gif,jpge,jpg 'can be upload！");
-            //    }
-            //    else
-            //    {
+                string[] str = new string[] { ".gif", ".jpge", ".jpg", ".png" };
+                if (!str.Contains(extension))
+                {
+                    MessageBox.Show("Only'gif,jpge,jpg 'can be upload！");
+                }
+                else
+                {
 
-            //        FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
-            //        if (fileInfo.Length > 409060)
-            //        {
-            //            MessageBox.Show("the size of picture need to < 400K");
-            //        }
-            //        else
-            //        {
-            //            //Path
-            //            string image = openFileDialog1.FileName;
-            //            //  XXX.jpg
-            //            string picpath = openFileDialog1.SafeFileName;
-            //            //File.Copy(openFileDialog1.FileName, Application.StartupPath + "\\Image\\" + picpath);
-            //        }
-            //    }
-            //}
+                    FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
+                    if (fileInfo.Length > 409060)
+                    {
+                        MessageBox.Show("the size of picture need to < 400K");
+                    }
+                    else
+                    {
+                        //Path
+                        string image = openFileDialog1.FileName;
+                        //  XXX.jpg
+                        string picpath = openFileDialog1.SafeFileName;
+                        //File.Copy(openFileDialog1.FileName, Application.StartupPath + "\\Image\\" + picpath);
+                    }
+                }
+            }
 
         }
       

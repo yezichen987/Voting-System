@@ -33,5 +33,10 @@ namespace VotingSystem
         {
             label1.Text = DateTime.Now.ToString();
         }
+
+        private void AuditorMenu_Load(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
     }
 }
