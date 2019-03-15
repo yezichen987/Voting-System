@@ -15,17 +15,22 @@ namespace VotingSystem
         Image[] images = new Image[3];
         public HomePage()
         {
+
             InitializeComponent();
             images[0] = Properties.Resources.vote1;
             images[1] = Properties.Resources.vote2;
             images[2] = Properties.Resources.vote3;
             
-            comboBox1.Items.Add(new Item("10px", 10));
-            comboBox1.Items.Add(new Item("20px", 20));
-            comboBox1.Items.Add(new Item("25px", 25));
+            fontsizecomboBox.Items.Add(new Item("8px", 8));
+            fontsizecomboBox.Items.Add(new Item("10px", 10));
+            fontsizecomboBox.Items.Add(new Item("12px", 12));
+            fontsizecomboBox.Items.Add(new Item("15px", 15));
+            fontsizecomboBox.Items.Add(new Item("18px", 18));
+            fontsizecomboBox.Items.Add(new Item("20px", 20));
+            fontsizecomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
-
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            string msg = string.Format("帐号:{0}", LoginInfo.CurrentUser.UserName);
+            LoginInfolabel.Text = msg;
         }
         private class Item
         {
@@ -54,7 +59,9 @@ namespace VotingSystem
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            TimeLabel.Text = DateTime.Now.ToString();
+
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +83,7 @@ namespace VotingSystem
             pictureBox1.Image = images[i];
             i++;
             if (i == 3) { i = 0; }
+            TimeLabel.Text = DateTime.Now.ToString();
         }
 
         private void registeredLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -106,16 +114,28 @@ namespace VotingSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Item itm = (Item)comboBox1.SelectedItem;
+            Item itm = (Item)fontsizecomboBox.SelectedItem;
           
             label2.Font = new Font("Arial", itm.size);
-            button1.Font = new Font("Arial", itm.size);
+            StartVotingbutton.Font = new Font("Arial", itm.size);
             button2.Font = new Font("Arial", itm.size);
             button3.Font = new Font("Arial", itm.size);
             TimeLabel.Font = new Font("Arial", itm.size);
             HomePageLabel.Font = new Font("Arial", itm.size);
-            linkLabel1.Font = new Font("Arial", itm.size);
+            LoginlinkLabel.Font = new Font("Arial", itm.size);
             registeredLabel.Font = new Font("Arial", itm.size);
+        }
+
+        private void TimeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartVotingbutton_Click(object sender, EventArgs e)
+        {
+            StartVoting startVoting = new StartVoting();
+            this.Hide();
+            startVoting.ShowDialog(this);
         }
     }
 }

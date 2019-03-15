@@ -23,8 +23,8 @@ namespace VotingSystem
         {
             try
             {
-                strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
-
+                strcon = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                /*Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True*/
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
@@ -73,7 +73,8 @@ namespace VotingSystem
         {
                 if (check() && DBConnect())
                 {
-                if(VoterradioButton.Text == "Voter"){
+                if(VoterradioButton.Text == "Voter")
+                {
                     strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                     command = new SqlCommand(strsql, mycon);
                     try
@@ -83,10 +84,12 @@ namespace VotingSystem
                         {
                             MessageBox.Show("successful login");
                             
-                            Homepage1 homePage = new Homepage1();
-                            this.Hide();
+                           
                             
-                            homePage.ShowDialog(this);
+                            LoginInfo.CurrentUser.UserName = UserNametextBox.Text;
+                            HomePage HomePage = new HomePage();
+                            this.Hide();
+                            HomePage.ShowDialog(this);
                         }
                         else
                         {
