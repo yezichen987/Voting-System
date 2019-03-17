@@ -61,7 +61,7 @@
             // LoginlinkLabel
             // 
             this.LoginlinkLabel.AutoSize = true;
-            this.LoginlinkLabel.Location = new System.Drawing.Point(783, 18);
+            this.LoginlinkLabel.Location = new System.Drawing.Point(806, 18);
             this.LoginlinkLabel.Name = "LoginlinkLabel";
             this.LoginlinkLabel.Size = new System.Drawing.Size(35, 12);
             this.LoginlinkLabel.TabIndex = 3;
@@ -83,18 +83,20 @@
             // HomePageLabel
             // 
             this.HomePageLabel.AutoSize = true;
+            this.HomePageLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomePageLabel.Location = new System.Drawing.Point(395, 18);
             this.HomePageLabel.Name = "HomePageLabel";
-            this.HomePageLabel.Size = new System.Drawing.Size(59, 12);
+            this.HomePageLabel.Size = new System.Drawing.Size(61, 15);
             this.HomePageLabel.TabIndex = 1;
             this.HomePageLabel.Text = "Home Page";
             // 
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
+            this.TimeLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.Location = new System.Drawing.Point(45, 18);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(29, 12);
+            this.TimeLabel.Size = new System.Drawing.Size(28, 15);
             this.TimeLabel.TabIndex = 0;
             this.TimeLabel.Text = "time";
             this.TimeLabel.Click += new System.EventHandler(this.TimeLabel_Click);
@@ -104,14 +106,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(690, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(59, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Font Size";
             // 
             // StartVotingbutton
             // 
             this.StartVotingbutton.AutoSize = true;
-            this.StartVotingbutton.Enabled = false;
             this.StartVotingbutton.Location = new System.Drawing.Point(34, 424);
             this.StartVotingbutton.Name = "StartVotingbutton";
             this.StartVotingbutton.Size = new System.Drawing.Size(200, 85);
@@ -149,7 +150,7 @@
             // fontsizecomboBox
             // 
             this.fontsizecomboBox.FormattingEnabled = true;
-            this.fontsizecomboBox.Location = new System.Drawing.Point(771, 71);
+            this.fontsizecomboBox.Location = new System.Drawing.Point(823, 76);
             this.fontsizecomboBox.Margin = new System.Windows.Forms.Padding(2);
             this.fontsizecomboBox.Name = "fontsizecomboBox";
             this.fontsizecomboBox.Size = new System.Drawing.Size(92, 20);
@@ -190,6 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "HomePage";
+            this.RightToLeftLayout = true;
             this.Text = "Home Page";
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel1.ResumeLayout(false);

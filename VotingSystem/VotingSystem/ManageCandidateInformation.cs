@@ -25,8 +25,8 @@ namespace VotingSystem
         {
             try
             {
-                strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
-
+                //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
@@ -88,6 +88,7 @@ namespace VotingSystem
         private void ManageCandidateInformation_Load(object sender, EventArgs e)
         {
             // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
+            comboBox1.Text = " ";
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
             this.AllowDrop = true;
             label1.Text = DateTime.Now.ToString();
@@ -96,7 +97,8 @@ namespace VotingSystem
         public bool ExecuteNone(string[] sql)
         {
             bool result;
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(" Data Source=localhost;Initial Catalog=Voting;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
             conn.Open();
             SqlTransaction tran = conn.BeginTransaction();
             SqlCommand cmd = new SqlCommand();
@@ -170,7 +172,7 @@ namespace VotingSystem
         {
            
             DBConnect();
-            strsql = string.Format("insert into Candidate(Name,information) values('{0}','{1}')", textBox1.Text,textBox2.Text);
+            strsql = string.Format("insert into Candidate(VoteName,Name,Information,VoteNum) values('{0}','{1}','{2}',0)", comboBox1.Text, textBox1.Text,textBox2.Text);
             MessageBox.Show(strsql);
             command = new SqlCommand(strsql, mycon);
             try
@@ -233,7 +235,7 @@ namespace VotingSystem
                 BinaryReader br = new BinaryReader(fs);
                 imageBytes = br.ReadBytes(Convert.ToInt32(fs.Length));//图片转换成二进制流
 
-                string strSql = string.Format("insert into CandidateImage(Image)Values(@Image)");
+                string strSql = string.Format("insert into Candidate(Image)Values(@Image)");
                 int count = Write(strSql, imageBytes);
 
                 if (count > 0)
@@ -275,7 +277,8 @@ namespace VotingSystem
 
         private int Write(string strSql, byte[] imageBytes)
         {
-            string connStr = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+            //string connStr = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+            string connStr = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {

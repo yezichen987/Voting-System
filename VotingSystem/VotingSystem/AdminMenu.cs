@@ -26,9 +26,7 @@ namespace VotingSystem
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AnnoucementManagement annoucement = new AnnoucementManagement();
-            this.Close();
-            annoucement.ShowDialog(this);
+          
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

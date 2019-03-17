@@ -53,11 +53,11 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnnoucementManagement.cs">
+    <Compile Include="AuditorChoose.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnnoucementManagement.Designer.cs">
-      <DependentUpon>AnnoucementManagement.cs</DependentUpon>
+    <Compile Include="AuditorChoose.Designer.cs">
+      <DependentUpon>AuditorChoose.cs</DependentUpon>
     </Compile>
     <Compile Include="AuditorMenu.cs">
       <SubType>Form</SubType>
@@ -106,12 +106,6 @@
     </Compile>
     <Compile Include="CandidateIntroduction6.Designer.cs">
       <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Homepage1.Designer.cs">
-      <DependentUpon>Homepage1.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePgae.cs">
       <SubType>Form</SubType>
@@ -179,8 +173,8 @@
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnnoucementManagement.resx">
-      <DependentUpon>AnnoucementManagement.cs</DependentUpon>
+    <EmbeddedResource Include="AuditorChoose.resx">
+      <DependentUpon>AuditorChoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuditorMenu.resx">
       <DependentUpon>AuditorMenu.cs</DependentUpon>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CandidateIntroduction6.resx">
       <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Homepage1.resx">
-      <DependentUpon>Homepage1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePgae.resx">
       <DependentUpon>HomePgae.cs</DependentUpon>

@@ -29,7 +29,7 @@ namespace VotingSystem
             fontsizecomboBox.Items.Add(new Item("20px", 20));
             fontsizecomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            string msg = string.Format("帐号:{0}", LoginInfo.CurrentUser.UserName);
+            string msg = string.Format("Voter:{0}", LoginInfo.CurrentUser.UserName);
             LoginInfolabel.Text = msg;
         }
         private class Item
@@ -62,6 +62,14 @@ namespace VotingSystem
 
             timer1.Interval = 1000;
             timer1.Start();
+            if(LoginInfo.CurrentUser.UserName=="")
+            {
+                LoginlinkLabel.Text = "Login";
+            }
+            else
+            {
+                LoginlinkLabel.Text = "Voter Info";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,9 +81,9 @@ namespace VotingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CandidateInformation candidateInformation = new CandidateInformation();
-            this.Close();
-            candidateInformation.ShowDialog(this);
+            ManageVotingStatement MVS = new ManageVotingStatement();
+            this.Hide();
+            MVS.ShowDialog(this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -95,9 +103,18 @@ namespace VotingSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if(LoginInfo.CurrentUser.UserName=="")
+            { 
             Login login = new Login();
             this.Hide();
             login.ShowDialog(this);
+            }
+            else
+            {
+                VoterInformation VI = new VoterInformation();
+                this.Hide();
+                VI.ShowDialog(this);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

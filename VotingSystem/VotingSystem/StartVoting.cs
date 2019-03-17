@@ -24,8 +24,8 @@ namespace VotingSystem
         {
             try
             {
-               // strcon = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
-                strcon = " Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+               strcon = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+               // strcon = " Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 /*Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True*/
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
@@ -49,7 +49,8 @@ namespace VotingSystem
         {
             if (button1.Text == "Submit") {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '1'";
@@ -62,7 +63,8 @@ namespace VotingSystem
             if (button1.Text == "Submit")
             {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '2'";
@@ -75,7 +77,8 @@ namespace VotingSystem
             if (button1.Text == "Submit")
             {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '3'";
@@ -88,7 +91,8 @@ namespace VotingSystem
             if (button1.Text == "Submit")
             {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '4'";
@@ -101,7 +105,8 @@ namespace VotingSystem
             if (button1.Text == "Submit")
             {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '5'";
@@ -114,7 +119,8 @@ namespace VotingSystem
             if (button1.Text == "Submit")
             {
                 SqlConnection sqlconn = new SqlConnection();
-                sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //sqlconn.ConnectionString = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 sqlconn.Open();
                 SqlCommand cmd = sqlconn.CreateCommand();
                 cmd.CommandText = "select Name from Candidate where Id = '6'";

@@ -29,8 +29,8 @@ namespace VotingSystem
         {
             try
             {
-                strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
-
+                //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
@@ -69,13 +69,15 @@ namespace VotingSystem
 
         private void Voting_Data_Graphic_Load(object sender, EventArgs e)
         {
+           
             DBConnect();
             showDataGrid();
             DGV1.RowHeadersVisible = false;
         }
         private void showDataGrid()
         {
-            strsql = "select * from Candidate";
+            strsql = string.Format("select * from Candidate Where VoteName = '{0}'" , Public.VoteName.ChooseVote );
+           
             command = new SqlCommand(strsql, mycon);
             command.ExecuteScalar();
             DS = new DataSet();
@@ -117,6 +119,11 @@ namespace VotingSystem
             textBox5.Text = DGV1.Rows[4].Cells[4].Value.ToString();
             textBox6.Text = DGV1.Rows[5].Cells[4].Value.ToString();
 
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
 
         }
 
