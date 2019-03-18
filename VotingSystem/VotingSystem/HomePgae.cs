@@ -21,7 +21,6 @@ namespace VotingSystem
             images[1] = Properties.Resources.vote2;
             images[2] = Properties.Resources.vote3;
             
-            fontsizecomboBox.Items.Add(new Item("8px", 8));
             fontsizecomboBox.Items.Add(new Item("10px", 10));
             fontsizecomboBox.Items.Add(new Item("12px", 12));
             fontsizecomboBox.Items.Add(new Item("15px", 15));
@@ -119,7 +118,7 @@ namespace VotingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CandidateInformation candidateInformation = new CandidateInformation();
+            CandidateInformation2 candidateInformation = new CandidateInformation2();
             this.Hide();
             candidateInformation.ShowDialog(this);
         }
@@ -133,14 +132,14 @@ namespace VotingSystem
         {
             Item itm = (Item)fontsizecomboBox.SelectedItem;
           
-            label2.Font = new Font("Arial", itm.size);
-            StartVotingbutton.Font = new Font("Arial", itm.size);
-            button2.Font = new Font("Arial", itm.size);
-            button3.Font = new Font("Arial", itm.size);
-            TimeLabel.Font = new Font("Arial", itm.size);
-            HomePageLabel.Font = new Font("Arial", itm.size);
-            LoginlinkLabel.Font = new Font("Arial", itm.size);
-            registeredLabel.Font = new Font("Arial", itm.size);
+            label2.Font = new Font("Times New Roman", itm.size);
+            StartVotingbutton.Font = new Font("Times New Roman", itm.size);
+            button2.Font = new Font("Times New Roman", itm.size);
+            button3.Font = new Font("Times New Roman", itm.size);
+            TimeLabel.Font = new Font("Times New Roman", itm.size);
+            HomePageLabel.Font = new Font("Times New Roman", itm.size);
+            LoginlinkLabel.Font = new Font("Times New Roman", itm.size);
+            registeredLabel.Font = new Font("Times New Roman", itm.size);
         }
 
         private void TimeLabel_Click(object sender, EventArgs e)
@@ -150,9 +149,9 @@ namespace VotingSystem
 
         private void StartVotingbutton_Click(object sender, EventArgs e)
         {
-            StartVoting startVoting = new StartVoting();
+            VotingChoose VC = new VotingChoose();
             this.Hide();
-            startVoting.ShowDialog(this);
+            VC.ShowDialog(this);
         }
     }
 }

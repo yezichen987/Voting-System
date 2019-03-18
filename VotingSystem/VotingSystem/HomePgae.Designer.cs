@@ -61,9 +61,10 @@
             // LoginlinkLabel
             // 
             this.LoginlinkLabel.AutoSize = true;
+            this.LoginlinkLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginlinkLabel.Location = new System.Drawing.Point(806, 18);
             this.LoginlinkLabel.Name = "LoginlinkLabel";
-            this.LoginlinkLabel.Size = new System.Drawing.Size(35, 12);
+            this.LoginlinkLabel.Size = new System.Drawing.Size(37, 19);
             this.LoginlinkLabel.TabIndex = 3;
             this.LoginlinkLabel.TabStop = true;
             this.LoginlinkLabel.Text = "login";
@@ -72,9 +73,10 @@
             // registeredLabel
             // 
             this.registeredLabel.AutoSize = true;
+            this.registeredLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registeredLabel.Location = new System.Drawing.Point(636, 18);
             this.registeredLabel.Name = "registeredLabel";
-            this.registeredLabel.Size = new System.Drawing.Size(65, 12);
+            this.registeredLabel.Size = new System.Drawing.Size(68, 19);
             this.registeredLabel.TabIndex = 2;
             this.registeredLabel.TabStop = true;
             this.registeredLabel.Text = "registered";
@@ -83,20 +85,20 @@
             // HomePageLabel
             // 
             this.HomePageLabel.AutoSize = true;
-            this.HomePageLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePageLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomePageLabel.Location = new System.Drawing.Point(395, 18);
             this.HomePageLabel.Name = "HomePageLabel";
-            this.HomePageLabel.Size = new System.Drawing.Size(61, 15);
+            this.HomePageLabel.Size = new System.Drawing.Size(106, 23);
             this.HomePageLabel.TabIndex = 1;
             this.HomePageLabel.Text = "Home Page";
             // 
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.Location = new System.Drawing.Point(45, 18);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(28, 15);
+            this.TimeLabel.Size = new System.Drawing.Size(34, 19);
             this.TimeLabel.TabIndex = 0;
             this.TimeLabel.Text = "time";
             this.TimeLabel.Click += new System.EventHandler(this.TimeLabel_Click);
@@ -104,9 +106,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(690, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Font Size";
             // 
@@ -171,9 +174,10 @@
             // LoginInfolabel
             // 
             this.LoginInfolabel.AutoSize = true;
+            this.LoginInfolabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginInfolabel.Location = new System.Drawing.Point(32, 79);
             this.LoginInfolabel.Name = "LoginInfolabel";
-            this.LoginInfolabel.Size = new System.Drawing.Size(41, 12);
+            this.LoginInfolabel.Size = new System.Drawing.Size(38, 15);
             this.LoginInfolabel.TabIndex = 11;
             this.LoginInfolabel.Text = "label1";
             // 

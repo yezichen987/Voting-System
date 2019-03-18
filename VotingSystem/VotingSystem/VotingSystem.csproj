@@ -59,53 +59,23 @@
     <Compile Include="AuditorChoose.Designer.cs">
       <DependentUpon>AuditorChoose.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuditorMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AuditorMenu.Designer.cs">
-      <DependentUpon>AuditorMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="CandidateInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CandidateInformation.Designer.cs">
       <DependentUpon>CandidateInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CandidateInformation2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateInformation2.Designer.cs">
+      <DependentUpon>CandidateInformation2.cs</DependentUpon>
+    </Compile>
     <Compile Include="CandidateIntroduction1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CandidateIntroduction1.Designer.cs">
       <DependentUpon>CandidateIntroduction1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateIntroduction2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateIntroduction2.Designer.cs">
-      <DependentUpon>CandidateIntroduction2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateIntroduction3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateIntroduction3.Designer.cs">
-      <DependentUpon>CandidateIntroduction3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateIntroduction4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateIntroduction4.Designer.cs">
-      <DependentUpon>CandidateIntroduction4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateIntroduction5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateIntroduction5.Designer.cs">
-      <DependentUpon>CandidateIntroduction5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CandidateIntroduction6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateIntroduction6.Designer.cs">
-      <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePgae.cs">
       <SubType>Form</SubType>
@@ -141,11 +111,29 @@
     <Compile Include="StartVoting.Designer.cs">
       <DependentUpon>StartVoting.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartVoting2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartVoting2.Designer.cs">
+      <DependentUpon>StartVoting2.cs</DependentUpon>
+    </Compile>
     <Compile Include="VoterInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VoterInformation.Designer.cs">
       <DependentUpon>VoterInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotingChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotingChoose.Designer.cs">
+      <DependentUpon>VotingChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotingControl.Designer.cs">
+      <DependentUpon>VotingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="VotingDataGraphic.cs">
       <SubType>Form</SubType>
@@ -176,29 +164,14 @@
     <EmbeddedResource Include="AuditorChoose.resx">
       <DependentUpon>AuditorChoose.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuditorMenu.resx">
-      <DependentUpon>AuditorMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CandidateInformation.resx">
       <DependentUpon>CandidateInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CandidateInformation2.resx">
+      <DependentUpon>CandidateInformation2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CandidateIntroduction1.resx">
       <DependentUpon>CandidateIntroduction1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateIntroduction2.resx">
-      <DependentUpon>CandidateIntroduction2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateIntroduction3.resx">
-      <DependentUpon>CandidateIntroduction3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateIntroduction4.resx">
-      <DependentUpon>CandidateIntroduction4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateIntroduction5.resx">
-      <DependentUpon>CandidateIntroduction5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CandidateIntroduction6.resx">
-      <DependentUpon>CandidateIntroduction6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePgae.resx">
       <DependentUpon>HomePgae.cs</DependentUpon>
@@ -225,11 +198,20 @@
     <EmbeddedResource Include="StartVoting.resx">
       <DependentUpon>StartVoting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartVoting2.resx">
+      <DependentUpon>StartVoting2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VoterInformation.resx">
       <DependentUpon>VoterInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageVotingStatement.resx">
       <DependentUpon>ManageVotingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotingChoose.resx">
+      <DependentUpon>VotingChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotingControl.resx">
+      <DependentUpon>VotingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotingDataGraphic.resx">
       <DependentUpon>VotingDataGraphic.cs</DependentUpon>

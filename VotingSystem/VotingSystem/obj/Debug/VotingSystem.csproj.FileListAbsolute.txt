@@ -32,7 +32,6 @@ C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.pdb
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorMenu.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction2.resources
@@ -55,3 +54,7 @@ C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.exe
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.pdb
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorChoose.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting2.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingChoose.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingControl.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation2.resources

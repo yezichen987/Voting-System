@@ -26,5 +26,21 @@ namespace VotingSystem
                 return _VoteName;
             }
         }
+
+        private string _ChooseCandidate = "";
+        public string ChooseCandidate { get { return _ChooseCandidate; } set { _ChooseCandidate = value; } }
+
+        private static Public _CandidateName = null;
+
+        //应用单件模式，保存用户登录状态
+        public static Public CandidateName
+        {
+            get
+            {
+                if (_CandidateName == null)
+                    _CandidateName = new Public();
+                return _CandidateName;
+            }
+        }
     }
 }

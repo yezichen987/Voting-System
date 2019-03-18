@@ -112,7 +112,7 @@ namespace VotingSystem
                             if (result > 0)
                             {
                                 MessageBox.Show("successful login");
-                                AuditorMenu auditorMenu = new AuditorMenu();
+                                AuditorChoose auditorMenu = new AuditorChoose();
                                 this.Hide();
                                 auditorMenu.ShowDialog(this);
                             }

@@ -22,6 +22,34 @@ namespace VotingSystem
             comboBox1.Items.Add(new Item("25px", 25));
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        string strcon, strsql;
+        SqlConnection mycon;
+        SqlCommand command;
+        DataSet DS;
+        SqlDataAdapter DA;
+        public string str;
+        string key;
+
+        private bool DBConnect()
+        {
+            try
+            {
+                //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                //MessageBox.Show("DB Connect is good");
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("DB Connect is not connect");
+
+                return false;
+            }
+        }
+
         private class Item
         {
             public string sizeName;
@@ -39,9 +67,7 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
-        string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
+       
         public CandidateIntroduction1(Image image)
         {
             InitializeComponent();
@@ -50,7 +76,7 @@ namespace VotingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CandidateInformation candidateInformation = new CandidateInformation();
+            CandidateInformation2 candidateInformation = new CandidateInformation2();
             this.Hide();
             candidateInformation.ShowDialog(this);
 
@@ -73,26 +99,48 @@ namespace VotingSystem
             label2.Font = new Font("Arial", itm.size);
             label3.Font = new Font("Arial", itm.size);
             label4.Font = new Font("Arial", itm.size);
-            label5.Font = new Font("Arial", itm.size);
+           
             button1.Font = new Font("Arial", itm.size);
          
         }
 
         private void CandidateIntroduction_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
+            DBConnect();
+            showInfo();
 
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("select Image from CandidateImage where CandidateImgId='1'", conn);
-            SqlDataReader reader = cmd.ExecuteReader();
+            label3.Text = Public.CandidateName.ChooseCandidate;
+            //SqlConnection conn = new SqlConnection(strcon);
+            //(@"Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
+            //conn.Open();
+            //showImage();
+
+
+        }
+       
+        private void showInfo()
+        {
+            strsql = string.Format("select Information from Candidate Where Name = '{0}'", Public.CandidateName.ChooseCandidate);
+            command = new SqlCommand(strsql, mycon);
+            DA = new SqlDataAdapter(command);
+            DS = new DataSet();
+            DA.Fill(DS);
+            String Info = DS.Tables[0].Rows[0]["Information"].ToString();
+            label4.Text = "Information: " + Info;
+        }
+          
+        private void showImage()
+        {
+            strsql = string.Format("select Image from Candidate where Name='{0}'", Public.CandidateName.ChooseCandidate);
+            command = new SqlCommand(strsql, mycon);
+            SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             MemoryStream buf = new MemoryStream((byte[])reader[0]);
             Image image = Image.FromStream(buf, true);
             pictureBox1.Image = image;
             label1.Text = DateTime.Now.ToString();
         }
-       
- 
+
        
 
         }

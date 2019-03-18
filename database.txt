@@ -1,0 +1,42 @@
+database Voting
+
+CREATE TABLE [dbo].[Admin] (
+    [Name]     VARCHAR (50) NOT NULL,
+    [Password] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Name] ASC)
+);
+
+CREATE TABLE [dbo].[Auditor] (
+    [Name]     VARCHAR (50) NOT NULL,
+    [Password] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Name] ASC)
+);
+
+CREATE TABLE [dbo].[Candidate] (
+    [Id]          INT          IDENTITY (1, 1) NOT NULL,
+    [Name]        VARCHAR (50) NOT NULL,
+    [Information] VARCHAR (50) NULL,
+    [VoteName]    VARCHAR (50) NOT NULL,
+    [VoteNum]     INT          NULL,
+    [Image]       IMAGE        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Candidate_ToTable] FOREIGN KEY ([VoteName]) REFERENCES [dbo].[Voting] ([VoteName])
+);
+
+CREATE TABLE [dbo].[Voter] (
+    [Name]     VARCHAR (50) NOT NULL,
+    [Password] VARCHAR (50) NOT NULL,
+    [Email]    VARCHAR (50) NULL,
+    [Age]      VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Name] ASC)
+);
+
+CREATE TABLE [dbo].[Voting] (
+    [VoteName]     VARCHAR (50)  NOT NULL,
+    [Time]         DATETIME      NOT NULL,
+    [VoterLimit]   INT           NOT NULL,
+    [CandidateNum] INT           NULL,
+    [Introduction] VARCHAR (MAX) NULL,
+    [Statement]    INT           NOT NULL,
+    PRIMARY KEY CLUSTERED ([VoteName] ASC)
+);
