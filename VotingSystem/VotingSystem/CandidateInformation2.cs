@@ -48,7 +48,7 @@ namespace VotingSystem
 
         private void showDataGrid()
         {
-            strsql = string.Format("select * from Candidate Where VoteName = '{0}'", comboBox1.Text);
+            strsql = string.Format("select Name,VoteName from Candidate Where VoteName = '{0}'", comboBox1.Text);
 
             command = new SqlCommand(strsql, mycon);
             command.ExecuteScalar();

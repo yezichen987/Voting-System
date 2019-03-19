@@ -15,26 +15,31 @@ namespace VotingSystem
         public AdminMenu()
         {
             InitializeComponent();
+
+            string msg = string.Format("Admin:{0}", LoginInfo.CurrentUser.UserName);
+
+            label3.Text = msg;
+
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ManageCandidateInformation MCI = new ManageCandidateInformation();
-            this.Close();
+            this.Hide();
             MCI.ShowDialog(this);
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ManageVotingStatement MVS = new ManageVotingStatement();
-            this.Close();
+            this.Hide();
             MVS.ShowDialog(this);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VotingSetting voting = new VotingSetting();
-            this.Close();
+            this.Hide();
             voting.ShowDialog(this);
         }
 
@@ -51,8 +56,13 @@ namespace VotingSystem
         private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VotingControl VC = new VotingControl();
-            this.Close();
+            this.Hide();
             VC.ShowDialog(this);
+        }
+
+        private void AdminMenu_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

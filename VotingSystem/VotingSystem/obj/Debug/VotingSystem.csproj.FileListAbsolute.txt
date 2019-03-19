@@ -34,11 +34,6 @@ C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction2.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction3.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction4.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction5.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction6.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Login.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources

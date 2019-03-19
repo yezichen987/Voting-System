@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Endbutton = new System.Windows.Forms.Button();
-            this.votingDataSet = new VotingSystem.VotingDataSet();
             this.votingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.votingDataSet = new VotingSystem.VotingDataSet();
+            this.Endbutton = new System.Windows.Forms.Button();
             this.votingTableAdapter = new VotingSystem.VotingDataSetTableAdapters.VotingTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.votingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,25 +60,25 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 1;
             // 
-            // Endbutton
+            // votingBindingSource
             // 
-            this.Endbutton.Location = new System.Drawing.Point(75, 126);
-            this.Endbutton.Name = "Endbutton";
-            this.Endbutton.Size = new System.Drawing.Size(75, 23);
-            this.Endbutton.TabIndex = 2;
-            this.Endbutton.Text = "End";
-            this.Endbutton.UseVisualStyleBackColor = true;
-            this.Endbutton.Click += new System.EventHandler(this.Endbutton_Click);
+            this.votingBindingSource.DataMember = "Voting";
+            this.votingBindingSource.DataSource = this.votingDataSet;
             // 
             // votingDataSet
             // 
             this.votingDataSet.DataSetName = "VotingDataSet";
             this.votingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // votingBindingSource
+            // Endbutton
             // 
-            this.votingBindingSource.DataMember = "Voting";
-            this.votingBindingSource.DataSource = this.votingDataSet;
+            this.Endbutton.Location = new System.Drawing.Point(25, 126);
+            this.Endbutton.Name = "Endbutton";
+            this.Endbutton.Size = new System.Drawing.Size(75, 23);
+            this.Endbutton.TabIndex = 2;
+            this.Endbutton.Text = "End";
+            this.Endbutton.UseVisualStyleBackColor = true;
+            this.Endbutton.Click += new System.EventHandler(this.Endbutton_Click);
             // 
             // votingTableAdapter
             // 
@@ -92,11 +93,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Close the Voting";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(138, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VotingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(234, 161);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Endbutton);
             this.Controls.Add(this.comboBox1);
@@ -104,8 +116,8 @@
             this.Name = "VotingControl";
             this.Text = "VotingControl";
             this.Load += new System.EventHandler(this.VotingControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.votingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +132,6 @@
         private System.Windows.Forms.BindingSource votingBindingSource;
         private VotingDataSetTableAdapters.VotingTableAdapter votingTableAdapter;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

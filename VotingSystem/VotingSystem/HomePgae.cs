@@ -69,6 +69,15 @@ namespace VotingSystem
             {
                 LoginlinkLabel.Text = "Voter Info";
             }
+
+            if( LoginlinkLabel.Text == "Login" )
+            {
+                StartVotingbutton.Enabled = false;
+            }
+            else
+            {
+                StartVotingbutton.Enabled = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

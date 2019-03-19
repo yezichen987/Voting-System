@@ -52,11 +52,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(309, 13);
+            this.label3.Location = new System.Drawing.Point(272, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.Size = new System.Drawing.Size(35, 12);
             this.label3.TabIndex = 1;
-            this.label3.Text = "admin1";
+            this.label3.Text = "admin";
             // 
             // label2
             // 
@@ -137,6 +137,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
+            this.Load += new System.EventHandler(this.AdminMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

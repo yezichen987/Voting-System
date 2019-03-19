@@ -53,6 +53,13 @@ namespace VotingSystem
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminMenu adminMenu = new AdminMenu();
+            this.Hide();
+            adminMenu.ShowDialog(this);
+        }
+
         private void Endbutton_Click(object sender, EventArgs e)
         {
             DBConnect();
@@ -62,12 +69,12 @@ namespace VotingSystem
             try
             {
                 command.ExecuteScalar();
-                MessageBox.Show("Successfully Voting.");
+                MessageBox.Show("Successfully Change.");
 
             }
             catch
             {
-                MessageBox.Show("Voting Error.");
+                MessageBox.Show("Change Error.");
             }
             //Check register
             finally

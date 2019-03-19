@@ -69,6 +69,13 @@ namespace VotingSystem
             label1.Text = DateTime.Now.ToString();
         }
 
+        private void BacklinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            this.Hide();
+            homePage.ShowDialog(this);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
                 if (check() && DBConnect())
@@ -112,6 +119,8 @@ namespace VotingSystem
                             if (result > 0)
                             {
                                 MessageBox.Show("successful login");
+
+                                LoginInfo.CurrentUser.UserName = UserNametextBox.Text;
                                 AuditorChoose auditorMenu = new AuditorChoose();
                                 this.Hide();
                                 auditorMenu.ShowDialog(this);
@@ -138,6 +147,8 @@ namespace VotingSystem
                             if (result > 0)
                             {
                                 MessageBox.Show("successful login");
+
+                                LoginInfo.CurrentUser.UserName = UserNametextBox.Text;
                                 AdminMenu adminmenu = new AdminMenu();
                                 this.Hide();
                                 adminmenu.ShowDialog(this);

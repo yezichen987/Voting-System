@@ -25,8 +25,8 @@ namespace VotingSystem
         {
             try
             {
-                strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
-
+                //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
@@ -51,16 +51,9 @@ namespace VotingSystem
                 UsernametextBox.Select();
                 return false;
             }
-            if (EmailtextBox.Text.Length == 0)
-            {
-                UsernametextBox.Select();
-                return false;
-            }
-            if (AgetextBox.Text.Length == 0)
-            {
-                UsernametextBox.Select();
-                return false;
-            }
+         
+            
+            
             return true;
         }
 
@@ -84,8 +77,8 @@ namespace VotingSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
             HomePage homePage = new HomePage();
-            this.Close();
-            homePage.ShowDialog();
+            this.Hide();
+            homePage.ShowDialog(this);
         }
 
         private void Register_Load(object sender, EventArgs e)
@@ -96,7 +89,7 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             DBConnect();
-            strsql = string.Format("insert into Voter(Name,Password,Email,Age) values('{0}','{1}','{2}','{3}')",UsernametextBox.Text,PasswordtextBox.Text,EmailtextBox.Text,AgetextBox.Text);
+            strsql = string.Format("insert into Voter(Name,Password) values('{0}','{1}')",UsernametextBox.Text,PasswordtextBox.Text);
             MessageBox.Show(strsql);
             command = new SqlCommand(strsql, mycon);
             try

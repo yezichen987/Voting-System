@@ -69,9 +69,9 @@
             this.Userlabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Userlabel.Location = new System.Drawing.Point(743, 9);
             this.Userlabel.Name = "Userlabel";
-            this.Userlabel.Size = new System.Drawing.Size(45, 19);
+            this.Userlabel.Size = new System.Drawing.Size(42, 19);
             this.Userlabel.TabIndex = 2;
-            this.Userlabel.Text = "admin";
+            this.Userlabel.Text = "Voter";
             // 
             // Notelabel
             // 
@@ -155,7 +155,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(530, 392);
+            this.button1.Location = new System.Drawing.Point(520, 392);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;

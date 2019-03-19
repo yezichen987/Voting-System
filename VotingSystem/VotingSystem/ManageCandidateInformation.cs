@@ -179,7 +179,9 @@ namespace VotingSystem
             {
                 command.ExecuteScalar();
                 MessageBox.Show("upload successful");
-               
+                comboBox1.Text = " ";
+                textBox1.Text = " ";
+                textBox2.Text = " ";               
             }
             catch
             { 
@@ -273,6 +275,13 @@ namespace VotingSystem
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AdminMenu adminMenu = new AdminMenu();
+            this.Hide();
+            adminMenu.ShowDialog(this);
         }
 
         private int Write(string strSql, byte[] imageBytes)

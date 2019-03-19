@@ -64,6 +64,7 @@
             this.BacklinkLabel.TabIndex = 2;
             this.BacklinkLabel.TabStop = true;
             this.BacklinkLabel.Text = "back";
+            this.BacklinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BacklinkLabel_LinkClicked);
             // 
             // label2
             // 

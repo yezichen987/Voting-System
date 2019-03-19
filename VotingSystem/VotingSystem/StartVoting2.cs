@@ -59,7 +59,7 @@ namespace VotingSystem
 
         private void showDataGrid()
         {
-            strsql = string.Format("select * from Candidate Where VoteName = '{0}'", Public.VoteName.ChooseVote);
+            strsql = string.Format("select Name, VoteName,VoteNum from Candidate Where VoteName = '{0}'", Public.VoteName.ChooseVote);
 
             command = new SqlCommand(strsql, mycon);
             command.ExecuteScalar();
@@ -90,12 +90,12 @@ namespace VotingSystem
                 DGV1.RowHeadersVisible = false;
 
             key = DGV1.CurrentRow.Cells[1].Value.ToString();
-            checkBox1.Text = DGV1.Rows[0].Cells[1].Value.ToString();
-            checkBox2.Text = DGV1.Rows[1].Cells[1].Value.ToString();
-            checkBox3.Text = DGV1.Rows[2].Cells[1].Value.ToString();
-            checkBox4.Text = DGV1.Rows[3].Cells[1].Value.ToString();
-            checkBox5.Text = DGV1.Rows[4].Cells[1].Value.ToString();
-            checkBox6.Text = DGV1.Rows[5].Cells[1].Value.ToString();
+            checkBox1.Text = DGV1.Rows[0].Cells[0].Value.ToString();
+            checkBox2.Text = DGV1.Rows[1].Cells[0].Value.ToString();
+            checkBox3.Text = DGV1.Rows[2].Cells[0].Value.ToString();
+            checkBox4.Text = DGV1.Rows[3].Cells[0].Value.ToString();
+            checkBox5.Text = DGV1.Rows[4].Cells[0].Value.ToString();
+            checkBox6.Text = DGV1.Rows[5].Cells[0].Value.ToString();
            
          
         }

@@ -23,7 +23,9 @@ namespace VotingSystem
         {
             try
             {
-                strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+                //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
+
+                strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
 
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
@@ -61,16 +63,17 @@ namespace VotingSystem
             HomePage homePage = new HomePage(textBox1.Text);
 
             DBConnect();
-            strsql = string.Format("insert into Voting(VoteLimit,CandidateNum) values('{0}','{1}')", comboBox1.Text,comboBox2.Text);
+            strsql = string.Format("insert into Voting(VoteName,Time,VoterLimit,CandidateNum,Statement) values('{0}','{1}','{2}','{3}',1)", textBox2.Text,textBox1.Text, comboBox1.Text,comboBox2.Text);
             MessageBox.Show(strsql);
             command = new SqlCommand(strsql, mycon);
             try
             {
                 command.ExecuteScalar();
                 MessageBox.Show("Save successful");
-                HomePage homePg = new HomePage();
+                
+                AdminMenu adminMenu = new AdminMenu();
                 this.Hide();
-                homePg.ShowDialog(this);
+                adminMenu.ShowDialog(this);
 
             }
             catch
@@ -86,30 +89,32 @@ namespace VotingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AdminMenu adminMenu = new AdminMenu();
+            this.Hide();
+            adminMenu.ShowDialog(this);
             timer1.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-            int minute = totalSecond / 60;
-            int second = totalSecond % 60;
-            String str = minute.ToString() + ":" + second.ToString() + ":" + tenthSecond.ToString();
-           textBox1.Text = str;
-            tenthSecond--;
-            if (tenthSecond == -1)
-            {
-                tenthSecond = 9;
-                totalSecond--;
-                if (totalSecond == -1)
-                {
-                    timer1.Enabled = false;
-                    //timer3.Enabled = false;
-                    textBox1.Text = "TimeOver！";
-                   textBox1.ForeColor = Color.FromArgb(255, 0, 0);
-                }
-            }
+           // int minute = totalSecond / 60;
+           // int second = totalSecond % 60;
+           // String str = minute.ToString() + ":" + second.ToString() + ":" + tenthSecond.ToString();
+           //textBox1.Text = str;
+           // tenthSecond--;
+           // if (tenthSecond == -1)
+           // {
+           //     tenthSecond = 9;
+           //     totalSecond--;
+           //     if (totalSecond == -1)
+           //     {
+           //         timer1.Enabled = false;
+           //         //timer3.Enabled = false;
+           //         textBox1.Text = "TimeOver！";
+           //        textBox1.ForeColor = Color.FromArgb(255, 0, 0);
+           //     }
+           // }
         }
 
         private void label1_Click(object sender, EventArgs e)

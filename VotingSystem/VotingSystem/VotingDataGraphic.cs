@@ -127,6 +127,11 @@ namespace VotingSystem
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose(false);
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
