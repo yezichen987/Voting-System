@@ -61,7 +61,7 @@ namespace VotingSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            //label1.Text = DateTime.Now.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +73,15 @@ namespace VotingSystem
 
         private void CandidateInformation_Load(object sender, EventArgs e)
         {
+            
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
             label1.Text = DateTime.Now.ToString();
+           
         }
     }
 }

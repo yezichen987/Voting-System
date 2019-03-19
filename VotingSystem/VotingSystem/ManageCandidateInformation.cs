@@ -92,6 +92,8 @@ namespace VotingSystem
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
             this.AllowDrop = true;
             label1.Text = DateTime.Now.ToString();
+            timer1.Interval = 1000;
+            timer1.Start();
 
         }
         public bool ExecuteNone(string[] sql)
@@ -133,35 +135,7 @@ namespace VotingSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-
-            //    pictureBox1.Load(openFileDialog1.FileName);
-            //    string extension = Path.GetExtension(openFileDialog1.FileName);
-
-            //    string[] str = new string[] { ".gif", ".jpge", ".jpg", ".png" };
-            //    if (!str.Contains(extension))
-            //    {
-            //        MessageBox.Show("Only'gif,jpge,jpg 'can be upload！");
-            //    }
-            //    else
-            //    {
-
-            //        FileInfo fileInfo = new FileInfo(openFileDialog1.FileName);
-            //        if (fileInfo.Length > 409060)
-            //        {
-            //            MessageBox.Show("the size of picture need to < 400K");
-            //        }
-            //        else
-            //        {
-            //            //Path
-            //            string image = openFileDialog1.FileName;
-            //            //  XXX.jpg
-            //            string picpath = openFileDialog1.SafeFileName;
-            //            //File.Copy(openFileDialog1.FileName, Application.StartupPath + "\\Image\\" + picpath);
-            //        }
-            //    }
-            //}
+            
 
         }
       
@@ -194,32 +168,7 @@ namespace VotingSystem
         
 
         }
-        //public void InageShow(PictureBox PB)
-        //{
-        //    OpenFileDialog openfile = new OpenFileDialog();
-        //    openfile.Title = " 请选择客户端longin的图片";
-        //    openfile.Filter = "Login图片 (*.jpg;*.bmp;*png)|*.jpeg;*.jpg;*.bmp;*.png|AllFiles(*.*)|*.*";
-        //    if (DialogResult.OK == openfile.ShowDialog())
-        //    {
-        //        try
-        //        {
-        //            Bitmap bmp = new Bitmap(openfile.FileName);
-        //            pictureBox1.Image = bmp;
-        //            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-
-        //            //字面是对当前图片进行了二进制转换
-        //            MemoryStream ms = new MemoryStream();
-        //            bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-        //            byte[] arr = new byte[ms.Length];
-        //            ms.Position = 0;
-        //            ms.Read(arr, 0, (int)ms.Length);
-        //            ms.Close();
-        //            //直接返这个值放到数据就行了
-        //            string ee = Convert.ToBase64String(arr);
-        //        }
-        //        catch { }
-        //    }
-        //}
+       
         private void button3_Click(object sender, EventArgs e)
         {
             //获取用户打开的路径然转换成二进制存入数据库
@@ -256,7 +205,7 @@ namespace VotingSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            //label1.Text = DateTime.Now.ToString();
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -282,6 +231,11 @@ namespace VotingSystem
             AdminMenu adminMenu = new AdminMenu();
             this.Hide();
             adminMenu.ShowDialog(this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
 
         private int Write(string strSql, byte[] imageBytes)

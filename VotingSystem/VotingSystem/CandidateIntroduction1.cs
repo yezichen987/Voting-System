@@ -108,7 +108,8 @@ namespace VotingSystem
         {
             DBConnect();
             showInfo();
-
+            timer1.Interval = 1000;
+            timer1.Start();
             label3.Text = Public.CandidateName.ChooseCandidate;
             //SqlConnection conn = new SqlConnection(strcon);
             //(@"Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
@@ -128,7 +129,12 @@ namespace VotingSystem
             String Info = DS.Tables[0].Rows[0]["Information"].ToString();
             label4.Text = "Information: " + Info;
         }
-          
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
+
         private void showImage()
         {
             strsql = string.Format("select Image from Candidate where Name='{0}'", Public.CandidateName.ChooseCandidate);

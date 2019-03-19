@@ -82,20 +82,21 @@ namespace VotingSystem
 
         private void StartVoting2_Load(object sender, EventArgs e)
         {
-            
+            timer1.Interval = 1000;
+            timer1.Start();
 
-                DBConnect();
+            DBConnect();
                 showDataGrid();
                  showNote();
                 DGV1.RowHeadersVisible = false;
 
             key = DGV1.CurrentRow.Cells[1].Value.ToString();
-            checkBox1.Text = DGV1.Rows[0].Cells[0].Value.ToString();
-            checkBox2.Text = DGV1.Rows[1].Cells[0].Value.ToString();
-            checkBox3.Text = DGV1.Rows[2].Cells[0].Value.ToString();
-            checkBox4.Text = DGV1.Rows[3].Cells[0].Value.ToString();
-            checkBox5.Text = DGV1.Rows[4].Cells[0].Value.ToString();
-            checkBox6.Text = DGV1.Rows[5].Cells[0].Value.ToString();
+            radioButton1.Text = DGV1.Rows[0].Cells[0].Value.ToString();
+            radioButton2.Text = DGV1.Rows[1].Cells[0].Value.ToString();
+            radioButton3.Text = DGV1.Rows[2].Cells[0].Value.ToString();
+            radioButton4.Text = DGV1.Rows[3].Cells[0].Value.ToString();
+            radioButton5.Text = DGV1.Rows[4].Cells[0].Value.ToString();
+            radioButton6.Text = DGV1.Rows[5].Cells[0].Value.ToString();
            
          
         }
@@ -110,12 +111,12 @@ namespace VotingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (radioButton1.Checked)
             {
                 
                 DBConnect();
                 
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox1.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton1.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -136,10 +137,10 @@ namespace VotingSystem
                     mycon.Close();
                 }
             }
-            if (checkBox2.Checked)
+            if (radioButton2.Checked)
             {
                 DBConnect();
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox2.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton2.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -160,10 +161,10 @@ namespace VotingSystem
                     mycon.Close();
                 }
             }
-            if (checkBox3.Checked)
+            if (radioButton3.Checked)
             {
                 DBConnect();
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox3.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton3.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -184,10 +185,10 @@ namespace VotingSystem
                     mycon.Close();
                 }
             }
-            if (checkBox4.Checked)
+            if (radioButton4.Checked)
             {
                 DBConnect();
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox4.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton4.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -208,10 +209,10 @@ namespace VotingSystem
                     mycon.Close();
                 }
             }
-            if (checkBox5.Checked)
+            if (radioButton5.Checked)
             {
                 DBConnect();
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox5.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton5.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -221,6 +222,7 @@ namespace VotingSystem
                     HomePage HomePage = new HomePage();
                     this.Hide();
                     HomePage.ShowDialog(this);
+                    
                 }
                 catch
                 {
@@ -232,10 +234,10 @@ namespace VotingSystem
                     mycon.Close();
                 }
             }
-            if (checkBox6.Checked)
+            if (radioButton6.Checked)
             {
                 DBConnect();
-                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", checkBox6.Text);// Voting candidate's vote +1
+                strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton6.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);
                 try
                 {
@@ -258,6 +260,17 @@ namespace VotingSystem
                 }
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Timelabel.Text = DateTime.Now.ToString();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void update_Load(object sender, EventArgs e)
         {
             DBConnect();

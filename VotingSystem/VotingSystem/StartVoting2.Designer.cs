@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Timelabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Userlabel = new System.Windows.Forms.Label();
             this.Notelabel = new System.Windows.Forms.Label();
             this.DGV1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SubButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +49,10 @@
             // 
             this.Timelabel.AutoSize = true;
             this.Timelabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timelabel.Location = new System.Drawing.Point(12, 9);
+            this.Timelabel.Location = new System.Drawing.Point(16, 11);
+            this.Timelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Timelabel.Name = "Timelabel";
-            this.Timelabel.Size = new System.Drawing.Size(38, 19);
+            this.Timelabel.Size = new System.Drawing.Size(50, 22);
             this.Timelabel.TabIndex = 0;
             this.Timelabel.Text = "Time";
             // 
@@ -57,9 +60,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 9);
+            this.label1.Location = new System.Drawing.Point(495, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 21);
+            this.label1.Size = new System.Drawing.Size(73, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Voting";
             // 
@@ -67,9 +71,10 @@
             // 
             this.Userlabel.AutoSize = true;
             this.Userlabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Userlabel.Location = new System.Drawing.Point(743, 9);
+            this.Userlabel.Location = new System.Drawing.Point(991, 11);
+            this.Userlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Userlabel.Name = "Userlabel";
-            this.Userlabel.Size = new System.Drawing.Size(42, 19);
+            this.Userlabel.Size = new System.Drawing.Size(51, 22);
             this.Userlabel.TabIndex = 2;
             this.Userlabel.Text = "Voter";
             // 
@@ -77,109 +82,124 @@
             // 
             this.Notelabel.AutoSize = true;
             this.Notelabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notelabel.Location = new System.Drawing.Point(48, 57);
+            this.Notelabel.Location = new System.Drawing.Point(64, 71);
+            this.Notelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Notelabel.Name = "Notelabel";
-            this.Notelabel.Size = new System.Drawing.Size(39, 15);
+            this.Notelabel.Size = new System.Drawing.Size(52, 19);
             this.Notelabel.TabIndex = 3;
             this.Notelabel.Text = "Note: ";
             // 
             // DGV1
             // 
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV1.Location = new System.Drawing.Point(51, 126);
+            this.DGV1.Location = new System.Drawing.Point(68, 158);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4);
             this.DGV1.Name = "DGV1";
             this.DGV1.RowTemplate.Height = 23;
-            this.DGV1.Size = new System.Drawing.Size(291, 289);
+            this.DGV1.Size = new System.Drawing.Size(388, 361);
             this.DGV1.TabIndex = 4;
             this.DGV1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV1_CellClick);
             // 
-            // checkBox1
+            // SubButton
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(437, 126);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(30, 16);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.SubButton.Location = new System.Drawing.Point(693, 490);
+            this.SubButton.Margin = new System.Windows.Forms.Padding(4);
+            this.SubButton.Name = "SubButton";
+            this.SubButton.Size = new System.Drawing.Size(100, 29);
+            this.SubButton.TabIndex = 11;
+            this.SubButton.Text = "Submit";
+            this.SubButton.UseVisualStyleBackColor = true;
+            this.SubButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBox2
+            // timer1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(633, 126);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(30, 16);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // checkBox3
+            // radioButton1
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(437, 210);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(30, 16);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(627, 158);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(36, 19);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "1";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // radioButton2
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(633, 210);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(30, 16);
-            this.checkBox4.TabIndex = 8;
-            this.checkBox4.Text = "4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(877, 158);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(36, 19);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // checkBox5
+            // radioButton3
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(437, 301);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(30, 16);
-            this.checkBox5.TabIndex = 9;
-            this.checkBox5.Text = "5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(627, 262);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(36, 19);
+            this.radioButton3.TabIndex = 14;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "3";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // radioButton4
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(633, 301);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(30, 16);
-            this.checkBox6.TabIndex = 10;
-            this.checkBox6.Text = "6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(877, 261);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(36, 19);
+            this.radioButton4.TabIndex = 15;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "4";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // radioButton5
             // 
-            this.button1.Location = new System.Drawing.Point(520, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(627, 376);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(36, 19);
+            this.radioButton5.TabIndex = 16;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "5";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(877, 376);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(36, 19);
+            this.radioButton6.TabIndex = 17;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "6";
+            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // StartVoting2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 441);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(1072, 551);
+            this.Controls.Add(this.radioButton6);
+            this.Controls.Add(this.radioButton5);
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.SubButton);
             this.Controls.Add(this.DGV1);
             this.Controls.Add(this.Notelabel);
             this.Controls.Add(this.Userlabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Timelabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartVoting2";
             this.Text = "StartVoting2";
             this.Load += new System.EventHandler(this.StartVoting2_Load);
@@ -196,12 +216,13 @@
         private System.Windows.Forms.Label Userlabel;
         private System.Windows.Forms.Label Notelabel;
         private System.Windows.Forms.DataGridView DGV1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SubButton;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BacklinkLabel = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.VoterradioButton = new System.Windows.Forms.RadioButton();
             this.Loginbutton = new System.Windows.Forms.Button();
             this.Registerbutton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 54);
             this.panel1.TabIndex = 0;
@@ -114,7 +116,7 @@
             // UserNametextBox
             // 
             this.UserNametextBox.Location = new System.Drawing.Point(233, 148);
-            this.UserNametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserNametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UserNametextBox.Name = "UserNametextBox";
             this.UserNametextBox.Size = new System.Drawing.Size(195, 25);
             this.UserNametextBox.TabIndex = 3;
@@ -122,7 +124,7 @@
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(233, 258);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(195, 25);
@@ -143,7 +145,7 @@
             // 
             this.AdminradioButton.AutoSize = true;
             this.AdminradioButton.Location = new System.Drawing.Point(233, 352);
-            this.AdminradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdminradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.AdminradioButton.Name = "AdminradioButton";
             this.AdminradioButton.Size = new System.Drawing.Size(68, 19);
             this.AdminradioButton.TabIndex = 9;
@@ -155,7 +157,7 @@
             // 
             this.AuditorradioButton.AutoSize = true;
             this.AuditorradioButton.Location = new System.Drawing.Point(233, 409);
-            this.AuditorradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AuditorradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.AuditorradioButton.Name = "AuditorradioButton";
             this.AuditorradioButton.Size = new System.Drawing.Size(84, 19);
             this.AuditorradioButton.TabIndex = 10;
@@ -167,7 +169,7 @@
             // 
             this.VoterradioButton.AutoSize = true;
             this.VoterradioButton.Location = new System.Drawing.Point(359, 352);
-            this.VoterradioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VoterradioButton.Margin = new System.Windows.Forms.Padding(4);
             this.VoterradioButton.Name = "VoterradioButton";
             this.VoterradioButton.Size = new System.Drawing.Size(68, 19);
             this.VoterradioButton.TabIndex = 11;
@@ -178,7 +180,7 @@
             // Loginbutton
             // 
             this.Loginbutton.Location = new System.Drawing.Point(71, 479);
-            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Loginbutton.Name = "Loginbutton";
             this.Loginbutton.Size = new System.Drawing.Size(100, 29);
             this.Loginbutton.TabIndex = 12;
@@ -189,13 +191,17 @@
             // Registerbutton
             // 
             this.Registerbutton.Location = new System.Drawing.Point(301, 479);
-            this.Registerbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Registerbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Registerbutton.Name = "Registerbutton";
             this.Registerbutton.Size = new System.Drawing.Size(100, 29);
             this.Registerbutton.TabIndex = 13;
             this.Registerbutton.Text = "Register";
             this.Registerbutton.UseVisualStyleBackColor = true;
             this.Registerbutton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Login
             // 
@@ -213,7 +219,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -240,5 +246,6 @@
         private System.Windows.Forms.RadioButton VoterradioButton;
         private System.Windows.Forms.Button Loginbutton;
         private System.Windows.Forms.Button Registerbutton;
+        private System.Windows.Forms.Timer timer1;
     }
 }

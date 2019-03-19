@@ -33,7 +33,7 @@ namespace VotingSystem
                 strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                //MessageBox.Show("DB Connect is good");
+                MessageBox.Show("DB Connect is good");
                 return true;
             }
             catch
@@ -69,7 +69,8 @@ namespace VotingSystem
 
         private void Voting_Data_Graphic_Load(object sender, EventArgs e)
         {
-           
+            timer1.Interval = 1000;
+            timer1.Start();
             DBConnect();
             showDataGrid();
             DGV1.RowHeadersVisible = false;
@@ -132,6 +133,11 @@ namespace VotingSystem
             AuditorChoose auditorChoose = new AuditorChoose();
             this.Hide();
             auditorChoose.ShowDialog(this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label7.Text = DateTime.Now.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

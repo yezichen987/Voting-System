@@ -50,7 +50,7 @@ namespace VotingSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            
         }
 
         private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -59,10 +59,17 @@ namespace VotingSystem
             this.Hide();
             VC.ShowDialog(this);
         }
-
+       
         private void AdminMenu_Load(object sender, EventArgs e)
         {
-           
+           // label1.Text = DateTime.Now.ToString();
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
     }
 }

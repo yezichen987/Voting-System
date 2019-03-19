@@ -36,8 +36,8 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.StartVotingbutton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.GetInforButton = new System.Windows.Forms.Button();
+            this.Databutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.fontsizecomboBox = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.HomePageLabel);
             this.panel1.Controls.Add(this.TimeLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 65);
+            this.panel1.Size = new System.Drawing.Size(1236, 81);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -62,9 +63,10 @@
             // 
             this.LoginlinkLabel.AutoSize = true;
             this.LoginlinkLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginlinkLabel.Location = new System.Drawing.Point(806, 18);
+            this.LoginlinkLabel.Location = new System.Drawing.Point(1075, 22);
+            this.LoginlinkLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoginlinkLabel.Name = "LoginlinkLabel";
-            this.LoginlinkLabel.Size = new System.Drawing.Size(37, 19);
+            this.LoginlinkLabel.Size = new System.Drawing.Size(50, 22);
             this.LoginlinkLabel.TabIndex = 3;
             this.LoginlinkLabel.TabStop = true;
             this.LoginlinkLabel.Text = "login";
@@ -74,9 +76,10 @@
             // 
             this.registeredLabel.AutoSize = true;
             this.registeredLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registeredLabel.Location = new System.Drawing.Point(636, 18);
+            this.registeredLabel.Location = new System.Drawing.Point(848, 22);
+            this.registeredLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registeredLabel.Name = "registeredLabel";
-            this.registeredLabel.Size = new System.Drawing.Size(68, 19);
+            this.registeredLabel.Size = new System.Drawing.Size(89, 22);
             this.registeredLabel.TabIndex = 2;
             this.registeredLabel.TabStop = true;
             this.registeredLabel.Text = "registered";
@@ -86,9 +89,10 @@
             // 
             this.HomePageLabel.AutoSize = true;
             this.HomePageLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomePageLabel.Location = new System.Drawing.Point(395, 18);
+            this.HomePageLabel.Location = new System.Drawing.Point(527, 22);
+            this.HomePageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HomePageLabel.Name = "HomePageLabel";
-            this.HomePageLabel.Size = new System.Drawing.Size(106, 23);
+            this.HomePageLabel.Size = new System.Drawing.Size(137, 31);
             this.HomePageLabel.TabIndex = 1;
             this.HomePageLabel.Text = "Home Page";
             // 
@@ -96,9 +100,10 @@
             // 
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.Location = new System.Drawing.Point(45, 18);
+            this.TimeLabel.Location = new System.Drawing.Point(60, 22);
+            this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(34, 19);
+            this.TimeLabel.Size = new System.Drawing.Size(44, 22);
             this.TimeLabel.TabIndex = 0;
             this.TimeLabel.Text = "time";
             this.TimeLabel.Click += new System.EventHandler(this.TimeLabel_Click);
@@ -107,42 +112,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(690, 79);
+            this.label2.Location = new System.Drawing.Point(920, 99);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.Size = new System.Drawing.Size(73, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Font Size";
             // 
             // StartVotingbutton
             // 
             this.StartVotingbutton.AutoSize = true;
-            this.StartVotingbutton.Location = new System.Drawing.Point(34, 424);
+            this.StartVotingbutton.Location = new System.Drawing.Point(45, 530);
+            this.StartVotingbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartVotingbutton.Name = "StartVotingbutton";
-            this.StartVotingbutton.Size = new System.Drawing.Size(200, 85);
+            this.StartVotingbutton.Size = new System.Drawing.Size(267, 106);
             this.StartVotingbutton.TabIndex = 6;
             this.StartVotingbutton.Text = "Start Voting";
             this.StartVotingbutton.UseVisualStyleBackColor = true;
             this.StartVotingbutton.Click += new System.EventHandler(this.StartVotingbutton_Click);
             // 
-            // button2
+            // GetInforButton
             // 
-            this.button2.Location = new System.Drawing.Point(353, 424);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 85);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Get Information";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.GetInforButton.Location = new System.Drawing.Point(471, 530);
+            this.GetInforButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GetInforButton.Name = "GetInforButton";
+            this.GetInforButton.Size = new System.Drawing.Size(283, 106);
+            this.GetInforButton.TabIndex = 7;
+            this.GetInforButton.Text = "Get Information";
+            this.GetInforButton.UseVisualStyleBackColor = true;
+            this.GetInforButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Databutton
             // 
-            this.button3.Location = new System.Drawing.Point(677, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(186, 85);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "View Voting Data";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Databutton.Location = new System.Drawing.Point(903, 530);
+            this.Databutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Databutton.Name = "Databutton";
+            this.Databutton.Size = new System.Drawing.Size(248, 106);
+            this.Databutton.TabIndex = 8;
+            this.Databutton.Text = "View Voting Data";
+            this.Databutton.UseVisualStyleBackColor = true;
+            this.Databutton.Click += new System.EventHandler(this.button3_Click);
             // 
             // timer1
             // 
@@ -153,20 +162,20 @@
             // fontsizecomboBox
             // 
             this.fontsizecomboBox.FormattingEnabled = true;
-            this.fontsizecomboBox.Location = new System.Drawing.Point(823, 76);
-            this.fontsizecomboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fontsizecomboBox.Location = new System.Drawing.Point(1097, 95);
+            this.fontsizecomboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fontsizecomboBox.Name = "fontsizecomboBox";
-            this.fontsizecomboBox.Size = new System.Drawing.Size(92, 20);
+            this.fontsizecomboBox.Size = new System.Drawing.Size(121, 23);
             this.fontsizecomboBox.TabIndex = 10;
             this.fontsizecomboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VotingSystem.Properties.Resources.vote1;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 128);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 160);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 246);
+            this.pictureBox1.Size = new System.Drawing.Size(645, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -175,25 +184,27 @@
             // 
             this.LoginInfolabel.AutoSize = true;
             this.LoginInfolabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginInfolabel.Location = new System.Drawing.Point(32, 79);
+            this.LoginInfolabel.Location = new System.Drawing.Point(43, 99);
+            this.LoginInfolabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoginInfolabel.Name = "LoginInfolabel";
-            this.LoginInfolabel.Size = new System.Drawing.Size(38, 15);
+            this.LoginInfolabel.Size = new System.Drawing.Size(51, 19);
             this.LoginInfolabel.TabIndex = 11;
             this.LoginInfolabel.Text = "label1";
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 553);
+            this.ClientSize = new System.Drawing.Size(1235, 691);
             this.Controls.Add(this.LoginInfolabel);
             this.Controls.Add(this.fontsizecomboBox);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Databutton);
+            this.Controls.Add(this.GetInforButton);
             this.Controls.Add(this.StartVotingbutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
             this.RightToLeftLayout = true;
             this.Text = "Home Page";
@@ -215,8 +226,8 @@
         private System.Windows.Forms.LinkLabel registeredLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button StartVotingbutton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button GetInforButton;
+        private System.Windows.Forms.Button Databutton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox fontsizecomboBox;
