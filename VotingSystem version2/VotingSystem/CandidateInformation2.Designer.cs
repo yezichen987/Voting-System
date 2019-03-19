@@ -70,9 +70,10 @@
             // 
             this.comboBox1.DataSource = this.votingBindingSource;
             this.comboBox1.DisplayMember = "VoteName";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(148, 88);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 3;
@@ -103,7 +104,7 @@
             // 
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV1.Location = new System.Drawing.Point(20, 135);
-            this.DGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4);
             this.DGV1.Name = "DGV1";
             this.DGV1.RowTemplate.Height = 23;
             this.DGV1.Size = new System.Drawing.Size(421, 256);
@@ -117,7 +118,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(120, 446);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 25);
             this.textBox1.TabIndex = 6;
@@ -126,7 +127,7 @@
             // 
             this.Getbutton.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Getbutton.Location = new System.Drawing.Point(34, 505);
-            this.Getbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Getbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Getbutton.Name = "Getbutton";
             this.Getbutton.Size = new System.Drawing.Size(133, 51);
             this.Getbutton.TabIndex = 7;
@@ -138,7 +139,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(271, 505);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 51);
             this.button1.TabIndex = 8;
@@ -159,7 +160,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CandidateInformation2";
             this.Text = "CandidateInformation2";
             this.Load += new System.EventHandler(this.CandidateInformation2_Load);
