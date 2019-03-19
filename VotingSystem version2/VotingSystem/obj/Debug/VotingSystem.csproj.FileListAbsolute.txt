@@ -1,0 +1,81 @@
+D:\123\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.exe.config
+D:\123\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.exe
+D:\123\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.pdb
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Login.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Properties.Resources.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Register.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VoterInformation.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageVotingStatement.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingSetting.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.GenerateResource.cache
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.CoreCompileInputs.cache
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.exe
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.pdb
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AnnoucementManagement.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorMenu.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction2.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction3.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction4.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction5.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction6.resources
+D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Homepage1.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.exe.config
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.exe
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.pdb
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Login.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Properties.Resources.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Register.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VoterInformation.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageVotingStatement.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingSetting.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.GenerateResource.cache
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csproj.CoreCompileInputs.cache
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.exe
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.pdb
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AuditorChoose.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting2.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingChoose.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingControl.resources
+C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation2.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.AuditorChoose.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.CandidateInformation2.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.Login.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.Properties.Resources.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.Register.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.StartVoting.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.StartVoting2.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.VoterInformation.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.ManageVotingStatement.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.VotingChoose.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.VotingControl.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.VotingSetting.resources
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.csproj.GenerateResource.cache
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.csproj.CoreCompileInputs.cache
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.exe
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\obj\Debug\VotingSystem.pdb
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\bin\Debug\VotingSystem.exe.config
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\bin\Debug\VotingSystem.exe
+C:\Users\P7XXTM1-G\Desktop\应用设计\subtask3\VotingSystem version2\VotingSystem\bin\Debug\VotingSystem.pdb
