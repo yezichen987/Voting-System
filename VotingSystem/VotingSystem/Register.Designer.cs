@@ -38,7 +38,7 @@
             this.PasswordtextBox = new System.Windows.Forms.TextBox();
             this.Submitbutton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HomepageButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 51);
             this.panel1.TabIndex = 0;
@@ -99,7 +99,7 @@
             // UsernametextBox
             // 
             this.UsernametextBox.Location = new System.Drawing.Point(243, 130);
-            this.UsernametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernametextBox.Name = "UsernametextBox";
             this.UsernametextBox.Size = new System.Drawing.Size(200, 25);
             this.UsernametextBox.TabIndex = 5;
@@ -107,7 +107,7 @@
             // PasswordtextBox
             // 
             this.PasswordtextBox.Location = new System.Drawing.Point(243, 222);
-            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordtextBox.Name = "PasswordtextBox";
             this.PasswordtextBox.Size = new System.Drawing.Size(200, 25);
             this.PasswordtextBox.TabIndex = 6;
@@ -115,7 +115,7 @@
             // Submitbutton
             // 
             this.Submitbutton.Location = new System.Drawing.Point(25, 310);
-            this.Submitbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Submitbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Submitbutton.Name = "Submitbutton";
             this.Submitbutton.Size = new System.Drawing.Size(124, 29);
             this.Submitbutton.TabIndex = 9;
@@ -126,7 +126,7 @@
             // Backbutton
             // 
             this.Backbutton.Location = new System.Drawing.Point(203, 310);
-            this.Backbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Backbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(124, 29);
             this.Backbutton.TabIndex = 10;
@@ -134,16 +134,16 @@
             this.Backbutton.UseVisualStyleBackColor = true;
             this.Backbutton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // HomepageButton
             // 
-            this.button1.Location = new System.Drawing.Point(361, 310);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 29);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Homepage";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.HomepageButton.Location = new System.Drawing.Point(361, 310);
+            this.HomepageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.HomepageButton.Name = "HomepageButton";
+            this.HomepageButton.Size = new System.Drawing.Size(124, 29);
+            this.HomepageButton.TabIndex = 11;
+            this.HomepageButton.Text = "Homepage";
+            this.HomepageButton.UseVisualStyleBackColor = true;
+            this.HomepageButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // timer1
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 389);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HomepageButton);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.Submitbutton);
             this.Controls.Add(this.PasswordtextBox);
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Register";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.TextBox PasswordtextBox;
         private System.Windows.Forms.Button Submitbutton;
         private System.Windows.Forms.Button Backbutton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button HomepageButton;
         private System.Windows.Forms.Timer timer1;
     }
 }

@@ -40,8 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Subbutton = new System.Windows.Forms.Button();
+            this.SelectButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.votingBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 59);
             this.panel1.TabIndex = 0;
@@ -133,7 +133,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(276, 188);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 25);
             this.textBox1.TabIndex = 6;
@@ -141,7 +141,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(305, 242);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(276, 381);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(188, 25);
             this.textBox2.TabIndex = 9;
@@ -160,27 +160,27 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button2
+            // Subbutton
             // 
-            this.button2.Location = new System.Drawing.Point(85, 450);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 29);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Submit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Subbutton.Location = new System.Drawing.Point(85, 450);
+            this.Subbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Subbutton.Name = "Subbutton";
+            this.Subbutton.Size = new System.Drawing.Size(135, 29);
+            this.Subbutton.TabIndex = 11;
+            this.Subbutton.Text = "Submit";
+            this.Subbutton.UseVisualStyleBackColor = true;
+            this.Subbutton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // SelectButton
             // 
-            this.button3.Location = new System.Drawing.Point(276, 336);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 25);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Select CandidateImg";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.SelectButton.Location = new System.Drawing.Point(276, 336);
+            this.SelectButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(189, 25);
+            this.SelectButton.TabIndex = 12;
+            this.SelectButton.Text = "Select CandidateImg";
+            this.SelectButton.UseVisualStyleBackColor = true;
+            this.SelectButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -199,7 +199,7 @@
             this.comboBox1.DisplayMember = "VoteName";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(276, 114);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(181, 23);
             this.comboBox1.TabIndex = 14;
@@ -242,8 +242,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.SelectButton);
+            this.Controls.Add(this.Subbutton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
@@ -251,7 +251,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageCandidateInformation";
             this.Text = "ManageCandidateInformation";
             this.Load += new System.EventHandler(this.ManageCandidateInformation_Load);
@@ -280,8 +280,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Subbutton;
+        private System.Windows.Forms.Button SelectButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private VotingDataSet votingDataSet;

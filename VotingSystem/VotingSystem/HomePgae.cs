@@ -143,8 +143,8 @@ namespace VotingSystem
           
             label2.Font = new Font("Times New Roman", itm.size);
             StartVotingbutton.Font = new Font("Times New Roman", itm.size);
-            button2.Font = new Font("Times New Roman", itm.size);
-            button3.Font = new Font("Times New Roman", itm.size);
+            GetInforButton.Font = new Font("Times New Roman", itm.size);
+            Databutton.Font = new Font("Times New Roman", itm.size);
             TimeLabel.Font = new Font("Times New Roman", itm.size);
             HomePageLabel.Font = new Font("Times New Roman", itm.size);
             LoginlinkLabel.Font = new Font("Times New Roman", itm.size);

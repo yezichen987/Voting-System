@@ -44,7 +44,7 @@
             this.votingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.votingDataSet = new VotingSystem.VotingDataSet();
             this.votingTableAdapter = new VotingSystem.VotingDataSetTableAdapters.VotingTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
@@ -58,7 +58,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(980, 55);
             this.panel1.TabIndex = 0;
@@ -155,7 +155,7 @@
             // 
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV1.Location = new System.Drawing.Point(48, 155);
-            this.DGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4);
             this.DGV1.Name = "DGV1";
             this.DGV1.RowTemplate.Height = 23;
             this.DGV1.Size = new System.Drawing.Size(476, 379);
@@ -178,7 +178,7 @@
             this.comboBox1.DisplayMember = "VoteName";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(727, 156);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 11;
@@ -198,16 +198,16 @@
             // 
             this.votingTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // Backbutton
             // 
-            this.button1.Location = new System.Drawing.Point(681, 464);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 29);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Backbutton.Location = new System.Drawing.Point(681, 464);
+            this.Backbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(100, 29);
+            this.Backbutton.TabIndex = 12;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // timer1
             // 
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 576);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.DGV1);
@@ -228,7 +228,7 @@
             this.Controls.Add(this.Numlabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageVotingStatement";
             this.Text = "VotingStatement";
             this.Load += new System.EventHandler(this.ManageVotingStatement_Load);
@@ -259,7 +259,7 @@
         private VotingDataSet votingDataSet;
         private System.Windows.Forms.BindingSource votingBindingSource;
         private VotingDataSetTableAdapters.VotingTableAdapter votingTableAdapter;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.Timer timer1;
     }
 }
