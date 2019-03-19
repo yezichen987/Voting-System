@@ -33,43 +33,47 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.votingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.votingDataSet = new VotingSystem.VotingDataSet();
             this.label4 = new System.Windows.Forms.Label();
             this.DGV1 = new System.Windows.Forms.DataGridView();
-            this.votingDataSet = new VotingSystem.VotingDataSet();
-            this.votingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.votingTableAdapter = new VotingSystem.VotingDataSetTableAdapters.VotingTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Getbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).BeginInit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.votingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(341, 13);
+            this.label2.Location = new System.Drawing.Point(455, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 12);
+            this.label2.Size = new System.Drawing.Size(151, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Candidate InfoList";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(731, 13);
+            this.label3.Location = new System.Drawing.Point(975, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Voter";
             // 
@@ -78,40 +82,43 @@
             this.comboBox1.DataSource = this.votingBindingSource;
             this.comboBox1.DisplayMember = "VoteName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 70);
+            this.comboBox1.Location = new System.Drawing.Point(148, 88);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label4
+            // votingBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 12);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
-            // 
-            // DGV1
-            // 
-            this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV1.Location = new System.Drawing.Point(15, 108);
-            this.DGV1.Name = "DGV1";
-            this.DGV1.RowTemplate.Height = 23;
-            this.DGV1.Size = new System.Drawing.Size(316, 321);
-            this.DGV1.TabIndex = 5;
-            this.DGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV1_CellContentClick);
+            this.votingBindingSource.DataMember = "Voting";
+            this.votingBindingSource.DataSource = this.votingDataSet;
             // 
             // votingDataSet
             // 
             this.votingDataSet.DataSetName = "VotingDataSet";
             this.votingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // votingBindingSource
+            // label4
             // 
-            this.votingBindingSource.DataMember = "Voting";
-            this.votingBindingSource.DataSource = this.votingDataSet;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 91);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 15);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
+            // 
+            // DGV1
+            // 
+            this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV1.Location = new System.Drawing.Point(20, 135);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV1.Name = "DGV1";
+            this.DGV1.RowTemplate.Height = 23;
+            this.DGV1.Size = new System.Drawing.Size(421, 401);
+            this.DGV1.TabIndex = 5;
+            this.DGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV1_CellContentClick);
             // 
             // votingTableAdapter
             // 
@@ -119,16 +126,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(479, 202);
+            this.textBox1.Location = new System.Drawing.Point(639, 252);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 21);
+            this.textBox1.Size = new System.Drawing.Size(179, 25);
             this.textBox1.TabIndex = 6;
             // 
             // Getbutton
             // 
-            this.Getbutton.Location = new System.Drawing.Point(435, 276);
+            this.Getbutton.Location = new System.Drawing.Point(580, 345);
+            this.Getbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Getbutton.Name = "Getbutton";
-            this.Getbutton.Size = new System.Drawing.Size(75, 23);
+            this.Getbutton.Size = new System.Drawing.Size(100, 29);
             this.Getbutton.TabIndex = 7;
             this.Getbutton.Text = "Get";
             this.Getbutton.UseVisualStyleBackColor = true;
@@ -136,19 +145,24 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(580, 276);
+            this.button1.Location = new System.Drawing.Point(773, 345);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 8;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // CandidateInformation2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 441);
+            this.ClientSize = new System.Drawing.Size(1045, 551);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Getbutton);
             this.Controls.Add(this.textBox1);
@@ -158,12 +172,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CandidateInformation2";
             this.Text = "CandidateInformation2";
             this.Load += new System.EventHandler(this.CandidateInformation2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.votingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.votingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +198,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Getbutton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

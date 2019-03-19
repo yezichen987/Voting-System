@@ -82,9 +82,10 @@ namespace VotingSystem
 
         private void StartVoting2_Load(object sender, EventArgs e)
         {
-            
+            timer1.Interval = 1000;
+            timer1.Start();
 
-                DBConnect();
+            DBConnect();
                 showDataGrid();
                  showNote();
                 DGV1.RowHeadersVisible = false;
@@ -258,6 +259,12 @@ namespace VotingSystem
                 }
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Timelabel.Text = DateTime.Now.ToString();
+        }
+
         private void update_Load(object sender, EventArgs e)
         {
             DBConnect();

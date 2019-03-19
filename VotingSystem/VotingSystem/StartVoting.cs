@@ -42,11 +42,13 @@ namespace VotingSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            //label1.Text = DateTime.Now.ToString();
         }
 
         private void StartVoting_Load(object sender, EventArgs e)
         {
+            timer1.Interval = 1000;
+            timer1.Start();
             if (button1.Text == "Submit") {
                 SqlConnection sqlconn = new SqlConnection();
                 sqlconn.ConnectionString = " Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
@@ -130,6 +132,11 @@ namespace VotingSystem
                 sqlconn.Close();
                 radioButton6.Text = temp_role;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

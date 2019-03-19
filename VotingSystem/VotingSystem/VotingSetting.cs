@@ -97,24 +97,8 @@ namespace VotingSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-           // int minute = totalSecond / 60;
-           // int second = totalSecond % 60;
-           // String str = minute.ToString() + ":" + second.ToString() + ":" + tenthSecond.ToString();
-           //textBox1.Text = str;
-           // tenthSecond--;
-           // if (tenthSecond == -1)
-           // {
-           //     tenthSecond = 9;
-           //     totalSecond--;
-           //     if (totalSecond == -1)
-           //     {
-           //         timer1.Enabled = false;
-           //         //timer3.Enabled = false;
-           //         textBox1.Text = "TimeOver！";
-           //        textBox1.ForeColor = Color.FromArgb(255, 0, 0);
-           //     }
-           // }
+            label1.Text = DateTime.Now.ToString();
+      
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -125,8 +109,9 @@ namespace VotingSystem
         private void VotingSetting_Load(object sender, EventArgs e)
         {
             textBox1.Text = DateTime.Now.ToString();
-
-            this.timer1.Stop();
+            timer1.Interval = 1000;
+            timer1.Start();
+           // this.timer1.Stop();
            
         }
     }

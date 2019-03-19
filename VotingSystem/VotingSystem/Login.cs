@@ -61,12 +61,13 @@ namespace VotingSystem
 
         private void Login_Load(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            
         }
 
         private void BacklinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -74,6 +75,11 @@ namespace VotingSystem
             HomePage homePage = new HomePage();
             this.Hide();
             homePage.ShowDialog(this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

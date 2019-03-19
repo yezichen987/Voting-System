@@ -71,9 +71,10 @@ namespace VotingSystem
 
         private void CandidateInformation2_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
+            
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
-
+            timer1.Interval = 1000;
+            timer1.Start();
             DBConnect();
             
 
@@ -98,6 +99,11 @@ namespace VotingSystem
             HomePage HomePage = new HomePage();
             this.Hide();
             HomePage.ShowDialog(this);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
