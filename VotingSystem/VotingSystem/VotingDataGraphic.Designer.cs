@@ -65,14 +65,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(331, 41);
+            this.chart1.Location = new System.Drawing.Point(313, 41);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(352, 214);
+            this.chart1.Size = new System.Drawing.Size(370, 214);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -214,7 +214,7 @@
             legend2.Enabled = false;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(331, 259);
+            this.chart2.Location = new System.Drawing.Point(313, 259);
             this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
@@ -224,7 +224,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(352, 251);
+            this.chart2.Size = new System.Drawing.Size(370, 251);
             this.chart2.TabIndex = 15;
             this.chart2.Text = "chart2";
             // 

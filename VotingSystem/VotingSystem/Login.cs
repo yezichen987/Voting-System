@@ -80,7 +80,7 @@ namespace VotingSystem
         {
                 if (check() && DBConnect())
                 {
-                if(VoterradioButton.Text == "Voter")
+                if(VoterradioButton.Text == "Voter" && VoterradioButton.Checked)
                 {
                     strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                     command = new SqlCommand(strsql, mycon);
@@ -100,7 +100,7 @@ namespace VotingSystem
                         }
                         else
                         {
-                           // MessageBox.Show("Login failed");
+                            MessageBox.Show("Login failed");
                         }
                     }
                     catch
@@ -109,7 +109,7 @@ namespace VotingSystem
                     }
                 }
                 
-                     if (AuditorradioButton.Text == "Auditor")
+                    else if (AuditorradioButton.Text == "Auditor" && AuditorradioButton.Checked)
                     {
                         strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                         command = new SqlCommand(strsql, mycon);
@@ -127,7 +127,7 @@ namespace VotingSystem
                             }
                             else
                             {
-                               // MessageBox.Show("Login failed");
+                                MessageBox.Show("Login failed");
                             }
                         }
                         catch
@@ -137,7 +137,7 @@ namespace VotingSystem
                     
                 }
                
-                     if(AdminradioButton.Text == "Admin")
+                    else if(AdminradioButton.Text == "Admin"&& AdminradioButton.Checked)
                     {
                         strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
                         command = new SqlCommand(strsql, mycon);
@@ -155,7 +155,7 @@ namespace VotingSystem
                             }
                             else
                             {
-                                //MessageBox.Show("Login failed");
+                                MessageBox.Show("Login failed");
                             }
                         }
                         catch
