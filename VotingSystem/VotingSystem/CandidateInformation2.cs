@@ -17,6 +17,16 @@ namespace VotingSystem
         public CandidateInformation2()
         {
             InitializeComponent();
+
+            if (LoginInfo.CurrentUser.UserName == "")
+            {
+                label3.Text = "Visitor";
+            }
+            else {
+                string msg = string.Format("Voter:{0}", LoginInfo.CurrentUser.UserName);
+                label3.Text = msg;
+            }
+                
         }
 
         string strcon, strsql;

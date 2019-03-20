@@ -71,7 +71,7 @@ namespace VotingSystem
         public CandidateIntroduction1(Image image)
         {
             InitializeComponent();
-            pictureBox1.Image = image;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace VotingSystem
 
         private void label2_Click(object sender, EventArgs e)
         {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -135,17 +135,17 @@ namespace VotingSystem
             label1.Text = DateTime.Now.ToString();
         }
 
-        private void showImage()
-        {
-            strsql = string.Format("select Image from Candidate where Name='{0}'", Public.CandidateName.ChooseCandidate);
-            command = new SqlCommand(strsql, mycon);
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            MemoryStream buf = new MemoryStream((byte[])reader[0]);
-            Image image = Image.FromStream(buf, true);
-            pictureBox1.Image = image;
-            label1.Text = DateTime.Now.ToString();
-        }
+        //private void showImage()
+        //{
+        //    strsql = string.Format("select Image from Candidate where Name='{0}'", Public.CandidateName.ChooseCandidate);
+        //    command = new SqlCommand(strsql, mycon);
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    reader.Read();
+        //    MemoryStream buf = new MemoryStream((byte[])reader[0]);
+        //    Image image = Image.FromStream(buf, true);
+        //    pictureBox1.Image = image;
+        //    label1.Text = DateTime.Now.ToString();
+        //}
 
        
 

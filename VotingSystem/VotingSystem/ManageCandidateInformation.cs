@@ -17,6 +17,8 @@ namespace VotingSystem
         public ManageCandidateInformation()
         {
             InitializeComponent();
+            label3.Text = LoginInfo.CurrentUser.UserName;
+
         }
         string strcon, strsql;
         SqlConnection mycon;
@@ -73,15 +75,15 @@ namespace VotingSystem
 
         private void ManageCandidateInformation_DragEnter(object sender, DragEventArgs e)
         {
-            string[] files = e.Data.GetData(DataFormats.FileDrop) as string[];
-            string file = files[0];
-            if (!file.ToLower().EndsWith(".png") && !file.ToLower().EndsWith(".jpg"))
-            {
-                MessageBox.Show("Need Picture!");
-                return;
-            }
+            //string[] files = e.Data.GetData(DataFormats.FileDrop) as string[];
+            //string file = files[0];
+            //if (!file.ToLower().EndsWith(".png") && !file.ToLower().EndsWith(".jpg"))
+            //{
+            //    MessageBox.Show("Need Picture!");
+            //    return;
+            //}
            
-            pictureBox1.Load(file);
+            //pictureBox1.Load(file);
 
         }
 
@@ -169,39 +171,39 @@ namespace VotingSystem
 
         }
        
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //获取用户打开的路径然转换成二进制存入数据库
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    //获取用户打开的路径然转换成二进制存入数据库
 
           
-                OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
+        //        OpenFileDialog ofd = new OpenFileDialog();
+        //    ofd.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
             
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
+        //    if (ofd.ShowDialog() == DialogResult.OK)
+        //    {
                
-                string filePath = ofd.FileName;//图片路径
-                FileStream fs = new FileStream(filePath, FileMode.Open);
-                byte[] imageBytes = new byte[fs.Length];
-                BinaryReader br = new BinaryReader(fs);
-                imageBytes = br.ReadBytes(Convert.ToInt32(fs.Length));//图片转换成二进制流
+        //        string filePath = ofd.FileName;//图片路径
+        //        FileStream fs = new FileStream(filePath, FileMode.Open);
+        //        byte[] imageBytes = new byte[fs.Length];
+        //        BinaryReader br = new BinaryReader(fs);
+        //        imageBytes = br.ReadBytes(Convert.ToInt32(fs.Length));//图片转换成二进制流
 
-                string strSql = string.Format("insert into CandidateImage(Image)Values(@Image)");
-                int count = Write(strSql, imageBytes);
+        //        string strSql = string.Format("insert into CandidateImage(Image)Values(@Image)");
+        //        int count = Write(strSql, imageBytes);
 
-                if (count > 0)
-                {
-                    MessageBox.Show(" Image Saved Successful！");
+        //        if (count > 0)
+        //        {
+        //            MessageBox.Show(" Image Saved Successful！");
                    
-                }
-                else
-                {
-                    MessageBox.Show("Fail！");
-                }
-            }
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Fail！");
+        //        }
+        //    }
 
 
-        }
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {

@@ -59,12 +59,6 @@
     <Compile Include="AuditorChoose.Designer.cs">
       <DependentUpon>AuditorChoose.cs</DependentUpon>
     </Compile>
-    <Compile Include="CandidateInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CandidateInformation.Designer.cs">
-      <DependentUpon>CandidateInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="CandidateInformation2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +98,6 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StartVoting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartVoting.Designer.cs">
-      <DependentUpon>StartVoting.cs</DependentUpon>
     </Compile>
     <Compile Include="StartVoting2.cs">
       <SubType>Form</SubType>
@@ -164,9 +152,6 @@
     <EmbeddedResource Include="AuditorChoose.resx">
       <DependentUpon>AuditorChoose.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CandidateInformation.resx">
-      <DependentUpon>CandidateInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CandidateInformation2.resx">
       <DependentUpon>CandidateInformation2.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +179,6 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StartVoting.resx">
-      <DependentUpon>StartVoting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartVoting2.resx">
       <DependentUpon>StartVoting2.cs</DependentUpon>

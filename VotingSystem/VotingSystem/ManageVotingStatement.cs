@@ -17,6 +17,14 @@ namespace VotingSystem
         public ManageVotingStatement()
         {
             InitializeComponent();
+            if(LoginInfo.CurrentUser.UserName == "")
+            {
+                label3.Text = "Visitor";
+            }
+            else { 
+            string msg = string.Format("{0}", LoginInfo.CurrentUser.UserName);
+            label3.Text = msg;
+            }
         }
         VotingSetting votingSetting;
 

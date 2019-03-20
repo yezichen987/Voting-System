@@ -15,6 +15,8 @@ namespace VotingSystem
         public VotingSetting()
         {
             InitializeComponent();
+            string msg = string.Format("Admin:{0}", LoginInfo.CurrentUser.UserName);
+            label3.Text = msg;
         }
         string strcon, strsql;
         SqlConnection mycon;

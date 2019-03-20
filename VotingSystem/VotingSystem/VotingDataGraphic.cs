@@ -16,6 +16,8 @@ namespace VotingSystem
         public Voting_Data_Graphic()
         {
             InitializeComponent();
+            string msg = string.Format("Auditor:{0}", LoginInfo.CurrentUser.UserName);
+            label9.Text = msg;
         }
         string strcon, strsql;
         SqlConnection mycon;
@@ -137,7 +139,7 @@ namespace VotingSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label7.Text = DateTime.Now.ToString();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

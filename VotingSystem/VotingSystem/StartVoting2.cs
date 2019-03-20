@@ -17,6 +17,8 @@ namespace VotingSystem
         public StartVoting2()
         {
             InitializeComponent();
+            string msg = string.Format("{0}", LoginInfo.CurrentUser.UserName);
+            Userlabel.Text = msg;
         }
 
         string strcon, strsql;

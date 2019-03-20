@@ -80,12 +80,12 @@ namespace VotingSystem
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            StartVoting startVoting = new StartVoting();
-            this.Hide();
-            startVoting.ShowDialog(this);
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    StartVoting startVoting = new StartVoting();
+        //    this.Hide();
+        //    startVoting.ShowDialog(this);
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {

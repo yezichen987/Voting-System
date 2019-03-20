@@ -24,14 +24,12 @@ C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\bin\Debug\VotingSystem.pdb
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.csprojAssemblyReference.cache
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.AdminMenu.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateInformation.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateIntroduction1.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.HomePage.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Login.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageCandidateInformation.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Properties.Resources.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Register.resources
-C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VoterInformation.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.ManageVotingStatement.resources
 C:\Users\P7XXTM1-G\Documents\GitHub\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.Voting_Data_Graphic.resources

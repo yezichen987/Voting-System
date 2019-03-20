@@ -57,12 +57,7 @@ namespace VotingSystem
             return true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            this.Hide();
-            login.ShowDialog(this);
-        }
+     
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
