@@ -93,7 +93,9 @@ namespace VotingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DBConnect();//Open database connection
+            //Open database connection
+            DBConnect();
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("insert into Voter(Name,Password) values('{0}','{1}')",UsernametextBox.Text,PasswordtextBox.Text);
             MessageBox.Show(strsql);//show message from the database
             command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute

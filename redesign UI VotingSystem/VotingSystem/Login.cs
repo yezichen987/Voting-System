@@ -27,6 +27,7 @@ namespace VotingSystem
                 /*Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True*/
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
+                // connection open
                 MessageBox.Show("DB Connect is good");
                 return true;
                 //Displayed when the database connection is successful
@@ -121,7 +122,7 @@ namespace VotingSystem
                         MessageBox.Show("Sql error");//show results
                     }
                 }
-                //Connect to the database to verify that the username and password are correct and return the verification data
+                
                 else if (AuditorradioButton.Text == "Auditor" && AuditorradioButton.Checked)//check the text are correct
                     {
                         strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
@@ -149,7 +150,7 @@ namespace VotingSystem
                         }
                     
                 }
-                //Connect to the database to verify that the username and password are correct and return the verification data
+                
                 else if (AdminradioButton.Text == "Admin"&& AdminradioButton.Checked)
                     {
                         strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
@@ -175,7 +176,7 @@ namespace VotingSystem
                         {
                             MessageBox.Show("Sql error");
                         }
-                    //Connect to the database to verify that the admin name and password are correct and return the verification data
+                    
                 }
             }
             

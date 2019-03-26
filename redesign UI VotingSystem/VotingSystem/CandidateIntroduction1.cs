@@ -25,8 +25,8 @@ namespace VotingSystem
         }
 
         string strcon, strsql;
-        SqlConnection mycon;//open the database connection
-        SqlCommand command;//Specify the SQL statement to execute
+        SqlConnection mycon;
+        SqlCommand command;
         DataSet DS;
         SqlDataAdapter DA;
         public string str;
@@ -142,17 +142,7 @@ namespace VotingSystem
             //display the datetime
         }
 
-        //private void showImage()
-        //{
-        //    strsql = string.Format("select Image from Candidate where Name='{0}'", Public.CandidateName.ChooseCandidate);
-        //    command = new SqlCommand(strsql, mycon);
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    reader.Read();
-        //    MemoryStream buf = new MemoryStream((byte[])reader[0]);
-        //    Image image = Image.FromStream(buf, true);
-        //    pictureBox1.Image = image;
-        //    label1.Text = DateTime.Now.ToString();
-        //}
+       
 
        
 

@@ -49,6 +49,7 @@ namespace VotingSystem
 
         private void GetStatement()
         {
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("select Statement from Voting Where VoteName = '{0}'", VoteNamecomboBox.Text);
             command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             DA = new SqlDataAdapter(command);
@@ -77,7 +78,7 @@ namespace VotingSystem
 
         private void VotingChoose_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
+           
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
             DBConnect();//connect to the database
            

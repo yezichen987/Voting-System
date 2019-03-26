@@ -60,8 +60,9 @@ namespace VotingSystem
         private void showDataGrid()
         {
             strsql = string.Format("select Name, Information, VoteNum from Candidate Where VoteName = '{0}'", comboBox1.Text);
-            //connect to the database
+            //Instantiate an object connected to a database
             command = new SqlCommand(strsql, mycon);
+            // open database connection
             command.ExecuteScalar();
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
@@ -84,6 +85,7 @@ namespace VotingSystem
 
         private void GetEndTime()
         {
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("select Time from Voting Where VoteName = '{0}'", comboBox1.Text);
             command = new SqlCommand(strsql, mycon);
             DA = new SqlDataAdapter(command);
@@ -96,6 +98,7 @@ namespace VotingSystem
 
         private void GetNum()
         {
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("select VoterLimit from Voting Where VoteName = '{0}'", comboBox1.Text);
             command = new SqlCommand(strsql, mycon);
             DA = new SqlDataAdapter(command);
@@ -144,7 +147,7 @@ namespace VotingSystem
 
         private void ManageVotingStatement_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
+            // TODO: This line of code loads the data into the table "votingDataSet.Voting". You can move or delete it as needed.
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
             DBConnect();
             timer1.Interval = 1000;

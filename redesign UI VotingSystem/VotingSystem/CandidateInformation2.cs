@@ -43,7 +43,9 @@ namespace VotingSystem
             {
                 //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
+                //Instantiate an object connected to a database
                 mycon = new SqlConnection(strcon);
+                //Open database connection
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
                 return true;
@@ -88,7 +90,9 @@ namespace VotingSystem
             
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
             timer1.Interval = 1000;
+            // time update every 1 second
             timer1.Start();
+            // time start
             DBConnect();
             //Perform a time event every 1000 milliseconds
 
@@ -98,6 +102,7 @@ namespace VotingSystem
         {
             string cellvalue = DGV1.SelectedCells[0].Value.ToString();
             textBox1.Text = cellvalue;
+            // click event, to show the information into textbox
         }
 
         private void Getbutton_Click(object sender, EventArgs e)
@@ -126,7 +131,7 @@ namespace VotingSystem
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             showDataGrid();
-
+            // datagrid show data
             DGV1.RowHeadersVisible = false;
         }
 

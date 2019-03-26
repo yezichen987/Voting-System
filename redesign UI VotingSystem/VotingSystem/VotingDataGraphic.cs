@@ -20,7 +20,7 @@ namespace VotingSystem
             label9.Text = msg;
         }
         string strcon, strsql;
-        SqlConnection mycon;//open the database connection
+        SqlConnection mycon;
         SqlCommand command;//Specify the SQL statement to execute
         DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
@@ -108,19 +108,19 @@ namespace VotingSystem
         }
         private void DGV1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            key = DGV1.CurrentRow.Cells[1].Value.ToString();
-            label1.Text = DGV1.Rows[0].Cells[1].Value.ToString();
-            label2.Text = DGV1.Rows[1].Cells[1].Value.ToString();
-            label3.Text = DGV1.Rows[2].Cells[1].Value.ToString();
-            label4.Text = DGV1.Rows[3].Cells[1].Value.ToString();
-            label5.Text = DGV1.Rows[4].Cells[1].Value.ToString();
-            label6.Text = DGV1.Rows[5].Cells[1].Value.ToString();
-            textBox1.Text = DGV1.Rows[0].Cells[4].Value.ToString();
-            textBox2.Text = DGV1.Rows[1].Cells[4].Value.ToString();
-            textBox3.Text = DGV1.Rows[2].Cells[4].Value.ToString();
-            textBox4.Text = DGV1.Rows[3].Cells[4].Value.ToString();
-            textBox5.Text = DGV1.Rows[4].Cells[4].Value.ToString();
-            textBox6.Text = DGV1.Rows[5].Cells[4].Value.ToString();
+            key = DGV1.CurrentRow.Cells[1].Value.ToString();// Execution conditional statement
+            label1.Text = DGV1.Rows[0].Cells[1].Value.ToString();// Get 0 row 1 cell data
+            label2.Text = DGV1.Rows[1].Cells[1].Value.ToString();// Get 1 row 1 cell data
+            label3.Text = DGV1.Rows[2].Cells[1].Value.ToString();// Get 2 row 1 cell data
+            label4.Text = DGV1.Rows[3].Cells[1].Value.ToString();// Get 3 row 1 cell data
+            label5.Text = DGV1.Rows[4].Cells[1].Value.ToString();// Get 4 row 1 cell data
+            label6.Text = DGV1.Rows[5].Cells[1].Value.ToString();// Get 5 row 1 cell data
+            textBox1.Text = DGV1.Rows[0].Cells[4].Value.ToString();// Get 0 row 4 cell data
+            textBox2.Text = DGV1.Rows[1].Cells[4].Value.ToString();// Get 1 row 4 cell data
+            textBox3.Text = DGV1.Rows[2].Cells[4].Value.ToString();// Get 2 row 4 cell data
+            textBox4.Text = DGV1.Rows[3].Cells[4].Value.ToString();// Get 3 row 4 cell data
+            textBox5.Text = DGV1.Rows[4].Cells[4].Value.ToString();// Get 4 row 4 cell data
+            textBox6.Text = DGV1.Rows[5].Cells[4].Value.ToString();// Get 5 row 4 cell data
 
 
         }

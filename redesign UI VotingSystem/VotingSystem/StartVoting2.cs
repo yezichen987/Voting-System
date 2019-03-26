@@ -115,9 +115,10 @@ namespace VotingSystem
         {
             if (radioButton1.Checked)
             {
-                
+                //Open database connection
                 DBConnect();
                 
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton1.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
@@ -141,7 +142,10 @@ namespace VotingSystem
             }
             if (radioButton2.Checked)
             {
+                //Open database connection
                 DBConnect();
+
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton2.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
@@ -165,7 +169,10 @@ namespace VotingSystem
             }
             if (radioButton3.Checked)
             {
+                //Open database connection
                 DBConnect();
+
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton3.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
@@ -189,7 +196,10 @@ namespace VotingSystem
             }
             if (radioButton4.Checked)
             {
+                //Open database connection
                 DBConnect();
+
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton4.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
@@ -213,7 +223,10 @@ namespace VotingSystem
             }
             if (radioButton5.Checked)
             {
+                //Open database connection
                 DBConnect();
+
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton5.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
@@ -238,7 +251,10 @@ namespace VotingSystem
             }
             if (radioButton6.Checked)
             {
+                //Open database connection
                 DBConnect();
+
+                //Specify the SQL statement and stored procedure name to execute
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton6.Text);// Voting candidate's vote +1
                 command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try

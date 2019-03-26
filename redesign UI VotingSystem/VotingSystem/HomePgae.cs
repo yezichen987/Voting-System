@@ -116,12 +116,14 @@ namespace VotingSystem
         {
             if(LoginInfo.CurrentUser.UserName=="")
             { 
+                // jump to login form
             Login login = new Login();
             this.Hide();
             login.ShowDialog(this);
             }
             else
             {
+                // jump to voter form
                 VoterInformation VI = new VoterInformation();
                 this.Hide();
                 VI.ShowDialog(this);

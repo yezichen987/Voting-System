@@ -63,7 +63,7 @@ namespace VotingSystem
         {
             timer1.Enabled = true;
             HomePage homePage = new HomePage(textBox1.Text);
-
+            //open the database connection
             DBConnect();
             strsql = string.Format("insert into Voting(VoteName,Time,VoterLimit,CandidateNum,Statement) values('{0}','{1}','{2}','{3}',1)", textBox2.Text,textBox1.Text, comboBox1.Text,comboBox2.Text);
             MessageBox.Show(strsql);//show message

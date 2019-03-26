@@ -55,6 +55,9 @@ namespace VotingSystem
 
         private void GetUserName()
         {
+           
+
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("select Name from Voter Where Name = '{0}'", label2.Text);
 
             command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
@@ -62,11 +65,12 @@ namespace VotingSystem
             DataSet DS = new DataSet();
             DA.Fill(DS);
             String name = DS.Tables[0].Rows[0]["Name"].ToString();
-            Usernamelabel.Text = name;//int username
+            Usernamelabel.Text = name;//get username
         }
 
         private void GetPassword()
         {
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("select Password from Voter Where Name = '{0}'", label2.Text);
 
             command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
@@ -95,7 +99,7 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             DBConnect();
-            
+            //Specify the SQL statement and stored procedure name to execute
             strsql = string.Format("update Voter set Password = '{0}' where Name = '{1}' ", PasswordtextBox.Text,label2.Text);
            
             MessageBox.Show(strsql);
