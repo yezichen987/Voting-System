@@ -19,9 +19,9 @@ namespace VotingSystem
         }
 
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
-        DataSet DS;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
+        DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
         public string str;
 
@@ -34,13 +34,13 @@ namespace VotingSystem
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
 
@@ -48,7 +48,7 @@ namespace VotingSystem
         {
             label1.Text = DateTime.Now.ToString();
             label2.Text = LoginInfo.CurrentUser.UserName;
-            DBConnect();
+            DBConnect();//open the connection
             GetUserName();
             GetPassword();
         }
@@ -57,24 +57,24 @@ namespace VotingSystem
         {
             strsql = string.Format("select Name from Voter Where Name = '{0}'", label2.Text);
 
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             DA = new SqlDataAdapter(command);
             DataSet DS = new DataSet();
             DA.Fill(DS);
             String name = DS.Tables[0].Rows[0]["Name"].ToString();
-            Usernamelabel.Text = name;
+            Usernamelabel.Text = name;//int username
         }
 
         private void GetPassword()
         {
             strsql = string.Format("select Password from Voter Where Name = '{0}'", label2.Text);
 
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             DA = new SqlDataAdapter(command);
             DataSet DS = new DataSet();
             DA.Fill(DS);
             String password = DS.Tables[0].Rows[0]["Password"].ToString();
-            PasswordtextBox.Text = password;
+            PasswordtextBox.Text = password;//int password
         }
 
 
@@ -82,14 +82,14 @@ namespace VotingSystem
         {
             HomePage homePage = new HomePage();
             this.Hide();
-            homePage.ShowDialog(this);
+            homePage.ShowDialog(this);//Interface conversion function
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             this.Hide();
-            login.ShowDialog(this);
+            login.ShowDialog(this);//Interface conversion function
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,22 +99,22 @@ namespace VotingSystem
             strsql = string.Format("update Voter set Password = '{0}' where Name = '{1}' ", PasswordtextBox.Text,label2.Text);
            
             MessageBox.Show(strsql);
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             try
             {
                 command.ExecuteScalar();
                 MessageBox.Show("Register successful");
                 Login login = new Login();
                 this.Hide();
-                login.ShowDialog(this);
+                login.ShowDialog(this);//Interface conversion function
             }
             catch
             {
-                MessageBox.Show("Register failed");
+                MessageBox.Show("Register failed");//show register result
             }
             finally
             {
-                mycon.Close();
+                mycon.Close();//close the connection
             }
         }
     }

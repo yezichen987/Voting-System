@@ -18,7 +18,7 @@ namespace VotingSystem
         }
         string strcon, strsql;
         SqlConnection mycon;
-        SqlCommand command;
+        SqlCommand command;//Specify the SQL statement to execute
         private bool DBConnect()
         {
             try
@@ -29,12 +29,14 @@ namespace VotingSystem
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
         private bool check()
@@ -51,18 +53,20 @@ namespace VotingSystem
             }
             return true;
         }
-
+        //Ensure that the textbox is not blank and save the data
         private void button2_Click(object sender, EventArgs e)
         {
             Register register = new Register();
             this.Hide();
             register.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             timer1.Interval = 1000;
             timer1.Start();
+            //Perform a time event every 1000 milliseconds
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,51 +79,54 @@ namespace VotingSystem
             HomePage homePage = new HomePage();
             this.Hide();
             homePage.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            //display the datetime
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-                if (check() && DBConnect())
+                if (check() && DBConnect())//check the database connection
                 {
-                if(VoterradioButton.Text == "Voter" && VoterradioButton.Checked)
+                if(VoterradioButton.Text == "Voter" && VoterradioButton.Checked)//check the text is correct
                 {
                     strsql = string.Format("select count (*) from Voter where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
-                    command = new SqlCommand(strsql, mycon);
+                    command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                     try
                     {
                         int result = Convert.ToInt32(command.ExecuteScalar());
                         if (result > 0)
                         {
                             MessageBox.Show("successful login");
-                            
+                            //if username and password are correct, show successful login in the messagebox
                            
                             
-                            LoginInfo.CurrentUser.UserName = UserNametextBox.Text;
+                            LoginInfo.CurrentUser.UserName = UserNametextBox.Text;//check the text correct
                             HomePage HomePage = new HomePage();
                             this.Hide();
                             HomePage.ShowDialog(this);
+                            //Interface conversion function
                         }
                         else
                         {
-                            MessageBox.Show("Login failed");
+                            MessageBox.Show("Login failed");//show results
                         }
                     }
                     catch
                     {
-                        MessageBox.Show("Sql error");
+                        MessageBox.Show("Sql error");//show results
                     }
                 }
-                
-                    else if (AuditorradioButton.Text == "Auditor" && AuditorradioButton.Checked)
+                //Connect to the database to verify that the username and password are correct and return the verification data
+                else if (AuditorradioButton.Text == "Auditor" && AuditorradioButton.Checked)//check the text are correct
                     {
                         strsql = string.Format("select count (*) from Auditor where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
-                        command = new SqlCommand(strsql, mycon);
-                        try
+                        command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
+                    try
                         {
                             int result = Convert.ToInt32(command.ExecuteScalar());
                             if (result > 0)
@@ -142,12 +149,12 @@ namespace VotingSystem
                         }
                     
                 }
-               
-                    else if(AdminradioButton.Text == "Admin"&& AdminradioButton.Checked)
+                //Connect to the database to verify that the username and password are correct and return the verification data
+                else if (AdminradioButton.Text == "Admin"&& AdminradioButton.Checked)
                     {
                         strsql = string.Format("select count (*) from Admin where Name = '{0}' and Password = '{1}'", UserNametextBox.Text, PasswordBox.Text);
-                        command = new SqlCommand(strsql, mycon);
-                        try
+                        command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
+                    try
                         {
                             int result = Convert.ToInt32(command.ExecuteScalar());
                             if (result > 0)
@@ -168,7 +175,7 @@ namespace VotingSystem
                         {
                             MessageBox.Show("Sql error");
                         }
-                    
+                    //Connect to the database to verify that the admin name and password are correct and return the verification data
                 }
             }
             

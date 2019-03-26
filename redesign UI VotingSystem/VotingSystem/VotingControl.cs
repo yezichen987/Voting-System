@@ -19,9 +19,9 @@ namespace VotingSystem
             InitializeComponent();
         }
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
-        DataSet DS;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
+        DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
         public string str;
         string key;
@@ -35,13 +35,13 @@ namespace VotingSystem
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
 
@@ -57,7 +57,7 @@ namespace VotingSystem
         {
             AdminMenu adminMenu = new AdminMenu();
             this.Hide();
-            adminMenu.ShowDialog(this);
+            adminMenu.ShowDialog(this);//Interface conversion function
         }
 
         private void Endbutton_Click(object sender, EventArgs e)
@@ -65,21 +65,21 @@ namespace VotingSystem
             DBConnect();
 
             strsql = string.Format("update Voting set Statement = 0  where VoteName = '{0}'", comboBox1.Text);// Voting candidate's vote +1
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             try
             {
                 command.ExecuteScalar();
-                MessageBox.Show("Successfully Change.");
+                MessageBox.Show("Successfully Change.");//Displayed when the database connection is successful
 
             }
             catch
             {
-                MessageBox.Show("Change Error.");
+                MessageBox.Show("Change Error.");//Displayed when the database connection is fail
             }
             //Check register
             finally
             {
-                mycon.Close();
+                mycon.Close();//close the connection
             }
         }
     }

@@ -48,3 +48,6 @@ D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.CandidateI
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.StartVoting2.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingChoose.resources
 D:\123\Voting-System\VotingSystem\VotingSystem\obj\Debug\VotingSystem.VotingControl.resources
+D:\123\Voting-System\redesign UI VotingSystem\VotingSystem\bin\Debug\VotingSystem.exe.config
+D:\123\Voting-System\redesign UI VotingSystem\VotingSystem\obj\Debug\VotingSystem.exe
+D:\123\Voting-System\redesign UI VotingSystem\VotingSystem\obj\Debug\VotingSystem.pdb

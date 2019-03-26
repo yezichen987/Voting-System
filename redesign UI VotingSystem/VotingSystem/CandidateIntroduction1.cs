@@ -17,20 +17,21 @@ namespace VotingSystem
         public CandidateIntroduction1()
         {
             InitializeComponent();
-            comboBox1.Items.Add(new Item("10px", 10));
-            comboBox1.Items.Add(new Item("20px", 20));
-            comboBox1.Items.Add(new Item("25px", 25));
+            comboBox1.Items.Add(new Item("10px", 10));//Change text font
+            comboBox1.Items.Add(new Item("20px", 20));//Change text font
+            comboBox1.Items.Add(new Item("25px", 25));//Change text font
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            
         }
 
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
         DataSet DS;
         SqlDataAdapter DA;
         public string str;
         string key;
-
+        //connect to database
         private bool DBConnect()
         {
             try
@@ -41,12 +42,14 @@ namespace VotingSystem
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
 
@@ -63,6 +66,7 @@ namespace VotingSystem
                 return sizeName;
             }
         }
+        //Fixed font size
         public CandidateIntroduction1(byte[] imagebytes)
         {
             InitializeComponent();
@@ -79,6 +83,7 @@ namespace VotingSystem
             CandidateInformation2 candidateInformation = new CandidateInformation2();
             this.Hide();
             candidateInformation.ShowDialog(this);
+            //Interface conversion function
 
         }
 
@@ -101,7 +106,7 @@ namespace VotingSystem
             label4.Font = new Font("Arial", itm.size);
            
             button1.Font = new Font("Arial", itm.size);
-         
+            //Font used for fixed text
         }
 
         private void CandidateIntroduction_Load(object sender, EventArgs e)
@@ -115,10 +120,10 @@ namespace VotingSystem
             //(@"Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True");
             //conn.Open();
             //showImage();
-
+            //Connect to the database and display the tabular data
 
         }
-       
+
         private void showInfo()
         {
             strsql = string.Format("select Information from Candidate Where Name = '{0}'", Public.CandidateName.ChooseCandidate);
@@ -128,11 +133,13 @@ namespace VotingSystem
             DA.Fill(DS);
             String Info = DS.Tables[0].Rows[0]["Information"].ToString();
             label4.Text = "Information: " + Info;
+            //connect to the database
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            //display the datetime
         }
 
         //private void showImage()

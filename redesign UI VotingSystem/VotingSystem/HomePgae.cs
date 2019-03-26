@@ -30,6 +30,7 @@ namespace VotingSystem
 
             string msg = string.Format("Voter:{0}", LoginInfo.CurrentUser.UserName);
             LoginInfolabel.Text = msg;
+            //Fixed text size
         }
         private class Item
         {
@@ -92,6 +93,7 @@ namespace VotingSystem
             ManageVotingStatement MVS = new ManageVotingStatement();
             this.Hide();
             MVS.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -107,6 +109,7 @@ namespace VotingSystem
             Register register = new Register();
             this.Hide();
             register.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -124,14 +127,14 @@ namespace VotingSystem
                 VI.ShowDialog(this);
             }
         }
-
+        //Interface conversion function
         private void button2_Click(object sender, EventArgs e)
         {
             CandidateInformation2 candidateInformation = new CandidateInformation2();
             this.Hide();
             candidateInformation.ShowDialog(this);
         }
-
+        //Interface conversion function
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -150,7 +153,7 @@ namespace VotingSystem
             LoginlinkLabel.Font = new Font("Times New Roman", itm.size);
             registeredLabel.Font = new Font("Times New Roman", itm.size);
         }
-
+        //Fixed text font
         private void TimeLabel_Click(object sender, EventArgs e)
         {
 
@@ -161,6 +164,7 @@ namespace VotingSystem
             VotingChoose VC = new VotingChoose();
             this.Hide();
             VC.ShowDialog(this);
+            //Interface conversion function
         }
     }
 }

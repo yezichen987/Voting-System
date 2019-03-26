@@ -31,12 +31,14 @@ namespace VotingSystem
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
         private bool check()
@@ -44,12 +46,12 @@ namespace VotingSystem
             if (UsernametextBox.Text.Length == 0)
             {
                 UsernametextBox.Select();
-                return false;
+                return false;//check textbox is not blank
             }
             if (PasswordtextBox.Text.Length == 0)
             {
                 UsernametextBox.Select();
-                return false;
+                return false;//check textbox is not blank
             }
          
             
@@ -74,40 +76,42 @@ namespace VotingSystem
             HomePage homePage = new HomePage();
             this.Hide();
             homePage.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void Register_Load(object sender, EventArgs e)
         {
             timer1.Interval = 1000;
             timer1.Start();
+            //Perform a time event every 1000 milliseconds
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label.Text = DateTime.Now.ToString();
+            label.Text = DateTime.Now.ToString();//get the time
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DBConnect();
+            DBConnect();//Open database connection
             strsql = string.Format("insert into Voter(Name,Password) values('{0}','{1}')",UsernametextBox.Text,PasswordtextBox.Text);
-            MessageBox.Show(strsql);
-            command = new SqlCommand(strsql, mycon);
+            MessageBox.Show(strsql);//show message from the database
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             try
             {
                 command.ExecuteScalar();
                 MessageBox.Show("Register successful");
                 Login login = new Login();
                 this.Hide();
-                login.ShowDialog(this);
+                login.ShowDialog(this);//save the user data and conversion interface
             }
             catch
             {
-                MessageBox.Show("Register failed");
+                MessageBox.Show("Register failed");//show information
             }
             finally
             {
-                mycon.Close();
+                mycon.Close();//database connection closed
             }
         }
     }

@@ -20,9 +20,9 @@ namespace VotingSystem
 
 
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
-        DataSet DS;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
+        DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
         public string str;
         string key;
@@ -37,20 +37,20 @@ namespace VotingSystem
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
 
         private void GetStatement()
         {
             strsql = string.Format("select Statement from Voting Where VoteName = '{0}'", VoteNamecomboBox.Text);
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             DA = new SqlDataAdapter(command);
             DataSet DS = new DataSet();
             DA.Fill(DS);
@@ -67,11 +67,11 @@ namespace VotingSystem
 
                 StartVoting2 SV2 = new StartVoting2();
                 this.Hide();
-                SV2.ShowDialog(this);
+                SV2.ShowDialog(this);//Interface conversion function
             }
             else if (VS == "0")
             {
-                MessageBox.Show("Sorry Vote is closed");
+                MessageBox.Show("Sorry Vote is closed");//show massage
             }
         }
 
@@ -79,7 +79,7 @@ namespace VotingSystem
         {
             // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
-            DBConnect();
+            DBConnect();//connect to the database
            
 
         }

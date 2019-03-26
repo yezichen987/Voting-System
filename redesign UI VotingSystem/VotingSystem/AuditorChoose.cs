@@ -19,7 +19,7 @@ namespace VotingSystem
 
         private void AuditorChoose_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“votingDataSet.Voting”中。您可以根据需要移动或删除它。
+            
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
 
         }
@@ -32,6 +32,7 @@ namespace VotingSystem
             Voting_Data_Graphic VDG = new Voting_Data_Graphic();
             this.Hide();
             VDG.ShowDialog(this);
+            //Interface conversion function
         }
     }
 }

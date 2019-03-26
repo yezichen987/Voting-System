@@ -22,9 +22,9 @@ namespace VotingSystem
         }
 
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
-        DataSet DS;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
+        DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
         public string str;
         string key;
@@ -35,23 +35,23 @@ namespace VotingSystem
             {
                 //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
-                mycon = new SqlConnection(strcon);
+                mycon = new SqlConnection(strcon);//Specify the SQL statement to execute
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
 
         private void showNote()
         {
             strsql = string.Format("select Introduction from Voting Where VoteName = '{0}'", Public.VoteName.ChooseVote);
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             DA = new SqlDataAdapter(command);
             DataSet DS = new DataSet();
             DA.Fill(DS);
@@ -62,9 +62,9 @@ namespace VotingSystem
         private void showDataGrid()
         {
             strsql = string.Format("select Name, VoteName,VoteNum from Candidate Where VoteName = '{0}'", Public.VoteName.ChooseVote);
-
-            command = new SqlCommand(strsql, mycon);
-            command.ExecuteScalar();
+            //open the database connection
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
+            command.ExecuteScalar();//Loop the entire object
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
@@ -73,9 +73,9 @@ namespace VotingSystem
         private void showDataGrid(string sqlco)
         {
             strsql = sqlco;
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             MessageBox.Show(strsql);
-            command.ExecuteScalar();
+            command.ExecuteScalar();//Loop the entire object
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
@@ -119,15 +119,15 @@ namespace VotingSystem
                 DBConnect();
                 
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton1.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
+                    HomePage.ShowDialog(this);//Interface conversion function
                 }
                 catch
                 {
@@ -136,22 +136,22 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
+                    mycon.Close();//close the connection
                 }
             }
             if (radioButton2.Checked)
             {
                 DBConnect();
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton2.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
+                    HomePage.ShowDialog(this);//Interface conversion function
                 }
                 catch
                 {
@@ -160,22 +160,22 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
+                    mycon.Close();//close the connection
                 }
             }
             if (radioButton3.Checked)
             {
                 DBConnect();
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton3.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
+                    HomePage.ShowDialog(this);//Interface conversion function
                 }
                 catch
                 {
@@ -184,22 +184,22 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
+                    mycon.Close();//close the connection
                 }
             }
             if (radioButton4.Checked)
             {
                 DBConnect();
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton4.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
+                    HomePage.ShowDialog(this);//Interface conversion function
                 }
                 catch
                 {
@@ -208,23 +208,23 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
+                    mycon.Close();//close the connection
                 }
             }
             if (radioButton5.Checked)
             {
                 DBConnect();
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton5.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
-                    
+                    HomePage.ShowDialog(this);//Interface conversion function
+
                 }
                 catch
                 {
@@ -233,22 +233,22 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
+                    mycon.Close();//close the connection
                 }
             }
             if (radioButton6.Checked)
             {
                 DBConnect();
                 strsql = string.Format("update Candidate set VoteNum = VoteNum +1 where Name = '{0}'", radioButton6.Text);// Voting candidate's vote +1
-                command = new SqlCommand(strsql, mycon);
+                command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
                 try
                 {
-                    command.ExecuteScalar();
+                    command.ExecuteScalar();//Loop the entire object
                     MessageBox.Show("Successfully Voting.");
 
                     HomePage HomePage = new HomePage();
                     this.Hide();
-                    HomePage.ShowDialog(this);
+                    HomePage.ShowDialog(this);//Interface conversion function
                 }
                 catch
                 {
@@ -257,15 +257,15 @@ namespace VotingSystem
                 //Check register
                 finally
                 {
-                    mycon.Close();
-                    
+                    mycon.Close();//close the connection
+
                 }
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Timelabel.Text = DateTime.Now.ToString();
+            Timelabel.Text = DateTime.Now.ToString();//show datetime
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -275,10 +275,10 @@ namespace VotingSystem
 
         private void update_Load(object sender, EventArgs e)
         {
-            DBConnect();
+            DBConnect();//connect to the database
             showDataGrid();
             int count = DS.Tables["Candidate"].Rows.Count;
-            mycon.Close();
+            mycon.Close();//close the connection
         }
 
 

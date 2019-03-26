@@ -35,7 +35,7 @@ namespace VotingSystem
         SqlDataAdapter DA;
         public string str;
         string key;
-
+        //connect to the database
         private bool DBConnect()
         {
             try
@@ -46,25 +46,28 @@ namespace VotingSystem
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
 
         private void showDataGrid()
         {
             strsql = string.Format("select Name, Information, VoteNum from Candidate Where VoteName = '{0}'", comboBox1.Text);
-
+            //connect to the database
             command = new SqlCommand(strsql, mycon);
             command.ExecuteScalar();
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
             DGV1.DataSource = DS.Tables["Candidate"];
+            //show data to the table
         }
         private void showDataGrid(string sqlco)
         {
@@ -76,6 +79,7 @@ namespace VotingSystem
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
             DGV1.DataSource = DS.Tables["Candidate"];
+            //show data to the table
         }
 
         private void GetEndTime()
@@ -87,6 +91,7 @@ namespace VotingSystem
             DA.Fill(DS);
             String time = DS.Tables[0].Rows[0]["Time"].ToString();
             TimeLabel.Text = time;
+            //get the end time from the timelabel
         }
 
         private void GetNum()
@@ -98,6 +103,7 @@ namespace VotingSystem
             DA.Fill(DS);
             String VL = DS.Tables[0].Rows[0]["VoterLimit"].ToString();
             Numlabel.Text = VL;
+            //get number from the number label
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -109,7 +115,7 @@ namespace VotingSystem
         {
             showDataGrid();
             GetEndTime();
-            GetNum();
+            GetNum();//get the time,number data from table
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -119,18 +125,21 @@ namespace VotingSystem
                 AdminMenu adminMenu = new AdminMenu();
                 this.Hide();
                 adminMenu.ShowDialog(this);
+                //Interface conversion function
             }
             else
             {
                 HomePage homePage = new HomePage();
                 this.Hide();
                 homePage.ShowDialog(this);
+                //Interface conversion function
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            //get the time
         }
 
         private void ManageVotingStatement_Load(object sender, EventArgs e)

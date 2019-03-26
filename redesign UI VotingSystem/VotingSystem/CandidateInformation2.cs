@@ -36,7 +36,7 @@ namespace VotingSystem
         SqlDataAdapter DA;
         public string str;
         string key;
-
+        //connect to database
         private bool DBConnect()
         {
             try
@@ -47,15 +47,17 @@ namespace VotingSystem
                 mycon.Open();
                 //MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
-
+        
         private void showDataGrid()
         {
             strsql = string.Format("select Name,VoteName from Candidate Where VoteName = '{0}'", comboBox1.Text);
@@ -66,6 +68,7 @@ namespace VotingSystem
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
             DGV1.DataSource = DS.Tables["Candidate"];
+            //Get the information needed for the form from the database
         }
         private void showDataGrid(string sqlco)
         {
@@ -77,6 +80,7 @@ namespace VotingSystem
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
             DGV1.DataSource = DS.Tables["Candidate"];
+            //Get the information needed for the form from the database
         }
 
         private void CandidateInformation2_Load(object sender, EventArgs e)
@@ -86,7 +90,7 @@ namespace VotingSystem
             timer1.Interval = 1000;
             timer1.Start();
             DBConnect();
-            
+            //Perform a time event every 1000 milliseconds
 
         }
 
@@ -102,6 +106,7 @@ namespace VotingSystem
             CandidateIntroduction1 CINTRO = new CandidateIntroduction1();
             this.Hide();
             CINTRO.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,11 +114,13 @@ namespace VotingSystem
             HomePage HomePage = new HomePage();
             this.Hide();
             HomePage.ShowDialog(this);
+            //Interface conversion function,back to the homepage
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            //display the datetime
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

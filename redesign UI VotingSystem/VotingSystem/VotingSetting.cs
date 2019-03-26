@@ -18,9 +18,9 @@ namespace VotingSystem
             string msg = string.Format("Admin:{0}", LoginInfo.CurrentUser.UserName);
             label3.Text = msg;
         }
-        string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
+        string strcon, strsql;//open the database connection
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//open the database connection
         private bool DBConnect()
         {
             try
@@ -30,15 +30,15 @@ namespace VotingSystem
                 strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
 
                 mycon = new SqlConnection(strcon);
-                mycon.Open();
+                mycon.Open();//open the database connection
                 MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
         private bool check()
@@ -46,14 +46,14 @@ namespace VotingSystem
             if (comboBox1.Text.Length == 0)
             {
                 comboBox1.Select();
-                return false;
+                return false;//If the text box in the text box is equal to zero, an error message is returned
             }
             if (comboBox2.Text.Length == 0)
             {
                 comboBox2.Select();
-                return false;
+                return false;//If the text box in the text box is equal to zero, an error message is returned
             }
-            return true;
+            return true;//If the text box in the text box is not equal to zero, a correct message is returned
         }
         private int totalSecond = 7198;
         private int tenthSecond = 9;
@@ -66,25 +66,25 @@ namespace VotingSystem
 
             DBConnect();
             strsql = string.Format("insert into Voting(VoteName,Time,VoterLimit,CandidateNum,Statement) values('{0}','{1}','{2}','{3}',1)", textBox2.Text,textBox1.Text, comboBox1.Text,comboBox2.Text);
-            MessageBox.Show(strsql);
-            command = new SqlCommand(strsql, mycon);
+            MessageBox.Show(strsql);//show message
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             try
             {
-                command.ExecuteScalar();
+                command.ExecuteScalar();//Loop the entire object
                 MessageBox.Show("Save successful");
                 
                 AdminMenu adminMenu = new AdminMenu();
                 this.Hide();
-                adminMenu.ShowDialog(this);
+                adminMenu.ShowDialog(this);//Interface conversion function
 
             }
             catch
             {
-                MessageBox.Show("Save failed");
+                MessageBox.Show("Save failed");//show message
             }
             finally
             {
-                mycon.Close();
+                mycon.Close();//close the connection
             }
 
         }
@@ -93,13 +93,13 @@ namespace VotingSystem
         {
             AdminMenu adminMenu = new AdminMenu();
             this.Hide();
-            adminMenu.ShowDialog(this);
+            adminMenu.ShowDialog(this);//Interface conversion function
             timer1.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            label1.Text = DateTime.Now.ToString();//get datetime
       
         }
 
@@ -111,7 +111,7 @@ namespace VotingSystem
         private void VotingSetting_Load(object sender, EventArgs e)
         {
             textBox1.Text = DateTime.Now.ToString();
-            timer1.Interval = 1000;
+            timer1.Interval = 1000; //Perform a time event every 1000 milliseconds
             timer1.Start();
            // this.timer1.Stop();
            

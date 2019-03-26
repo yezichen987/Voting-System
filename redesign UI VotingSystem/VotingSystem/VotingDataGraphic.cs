@@ -20,9 +20,9 @@ namespace VotingSystem
             label9.Text = msg;
         }
         string strcon, strsql;
-        SqlConnection mycon;
-        SqlCommand command;
-        DataSet DS;
+        SqlConnection mycon;//open the database connection
+        SqlCommand command;//Specify the SQL statement to execute
+        DataSet DS;//rename dataset to DS
         SqlDataAdapter DA;
         public string str;
         string key;
@@ -33,16 +33,16 @@ namespace VotingSystem
             {
                 //strcon = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
                 strcon = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
+                mycon = new SqlConnection(strcon);//Specify the SQL statement to execute
+                mycon.Open();//open the connection
                 MessageBox.Show("DB Connect is good");
-                return true;
+                return true;//Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
-                return false;
+                return false;//Displayed when the database connection is fail
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -53,13 +53,13 @@ namespace VotingSystem
           
             Strength.ChartType = SeriesChartType.Column;
         
-            Strength.Points.AddXY(label1.Text, textBox1.Text);
-            Strength.Points.AddXY(label2.Text, textBox2.Text);
-            Strength.Points.AddXY(label3.Text, textBox3.Text);
-            Strength.Points.AddXY(label4.Text, textBox4.Text);
-            Strength.Points.AddXY(label5.Text, textBox5.Text);
-            Strength.Points.AddXY(label6.Text, textBox6.Text);
-       
+            Strength.Points.AddXY(label1.Text, textBox1.Text);//Get the text in the text box
+            Strength.Points.AddXY(label2.Text, textBox2.Text);//Get the text in the text box
+            Strength.Points.AddXY(label3.Text, textBox3.Text);//Get the text in the text box
+            Strength.Points.AddXY(label4.Text, textBox4.Text);//Get the text in the text box
+            Strength.Points.AddXY(label5.Text, textBox5.Text);//Get the text in the text box
+            Strength.Points.AddXY(label6.Text, textBox6.Text);//Get the text in the text box
+
             chart1.Series.Add(Strength);
             chart2.Series[0]["PieLabelStyle"] = "Outside";
             chart2.Series[0]["PieLineColor"] = "Black";
@@ -73,7 +73,7 @@ namespace VotingSystem
         {
             timer1.Interval = 1000;
             timer1.Start();
-            DBConnect();
+            DBConnect();//connect to the database
             showDataGrid();
             DGV1.RowHeadersVisible = false;
         }
@@ -81,8 +81,8 @@ namespace VotingSystem
         {
             strsql = string.Format("select * from Candidate Where VoteName = '{0}'" , Public.VoteName.ChooseVote );
            
-            command = new SqlCommand(strsql, mycon);
-            command.ExecuteScalar();
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
+            command.ExecuteScalar();//Loop the entire object
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
@@ -91,9 +91,9 @@ namespace VotingSystem
         private void showDataGrid(string sqlco)
         {
             strsql = sqlco;
-            command = new SqlCommand(strsql, mycon);
+            command = new SqlCommand(strsql, mycon);//Specify the SQL statement to execute
             MessageBox.Show(strsql);
-            command.ExecuteScalar();
+            command.ExecuteScalar();//Loop the entire object
             DS = new DataSet();
             DA = new SqlDataAdapter(command);
             DA.Fill(DS, "Candidate");
@@ -134,7 +134,7 @@ namespace VotingSystem
         {
             AuditorChoose auditorChoose = new AuditorChoose();
             this.Hide();
-            auditorChoose.ShowDialog(this);
+            auditorChoose.ShowDialog(this);//Interface conversion function
         }
 
         private void timer1_Tick(object sender, EventArgs e)

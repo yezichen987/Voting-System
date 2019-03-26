@@ -33,12 +33,14 @@ namespace VotingSystem
                 mycon.Open();
                 MessageBox.Show("DB Connect is good");
                 return true;
+                //Displayed when the database connection is successful
             }
             catch
             {
                 MessageBox.Show("DB Connect is not connect");
 
                 return false;
+                //Displayed when the database connection is fail
             }
         }
         private bool check()
@@ -54,6 +56,7 @@ namespace VotingSystem
                 return false;
             }
             return true;
+            //Ensure that the textbox is not blank and save the data
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -133,7 +136,7 @@ namespace VotingSystem
             conn.Close();
 
             return result;
-
+            //connect to the database and train the connection
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -167,7 +170,7 @@ namespace VotingSystem
             {
                 mycon.Close();
             }
-        
+        //connect to the database and save changes
 
         }
        
@@ -225,7 +228,7 @@ namespace VotingSystem
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            //show data from the database in the massagebox
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -233,18 +236,20 @@ namespace VotingSystem
             AdminMenu adminMenu = new AdminMenu();
             this.Hide();
             adminMenu.ShowDialog(this);
+            //Interface conversion function
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+            //display the datetime
         }
 
         private int Write(string strSql, byte[] imageBytes)
         {
             //string connStr = "Data Source=DESKTOP-6UGITVT;Initial Catalog=Voting;Integrated Security=True";
             string connStr = "Data Source=localhost;Initial Catalog=Voting;Integrated Security=True";
-
+            //Get the database path
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 using (SqlCommand cmd = new SqlCommand(strSql, conn))
