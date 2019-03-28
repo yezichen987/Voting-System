@@ -10,13 +10,13 @@ namespace VotingSystem
     {
 
  
-        //用户名
+        //user name
         private string _UserName = "";
         public string UserName { get { return _UserName; } set { _UserName = value; } }
  
         private static LoginInfo _CurrentUser = null;
  
-        //应用单件模式，保存用户登录状态
+        //save the login statement
         public static LoginInfo CurrentUser
         {
             get

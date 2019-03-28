@@ -10,13 +10,13 @@ namespace VotingSystem
     {
         private int a;
 
-        //用户名
+        //vote name
         private string _ChooseVote = "";
         public string ChooseVote { get { return _ChooseVote; } set { _ChooseVote = value; } }
 
         private static Public _VoteName = null;
 
-        //应用单件模式，保存用户登录状态
+        //save vote name 
         public static Public VoteName
         {
             get
@@ -26,13 +26,13 @@ namespace VotingSystem
                 return _VoteName;
             }
         }
-
+        // this is choosed candidate name
         private string _ChooseCandidate = "";
         public string ChooseCandidate { get { return _ChooseCandidate; } set { _ChooseCandidate = value; } }
 
         private static Public _CandidateName = null;
 
-        //应用单件模式，保存用户登录状态
+        //store candidate name
         public static Public CandidateName
         {
             get

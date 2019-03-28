@@ -19,7 +19,7 @@ namespace VotingSystem
 
         private void AuditorChoose_Load(object sender, EventArgs e)
         {
-            
+            //get votingdata in the votingDataSet
             this.votingTableAdapter.Fill(this.votingDataSet.Voting);
 
         }

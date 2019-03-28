@@ -24,6 +24,7 @@ namespace VotingSystem
             }
             else {
                 string msg = string.Format("Voter:{0}", LoginInfo.CurrentUser.UserName);
+                //get Voter username from the logininfo class
                 label3.Text = msg;
             }
                 
